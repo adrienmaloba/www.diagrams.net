@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Blog - Support for hand-drawn diagrams with rough.js</title>
+  <title>Blog - Work faster with the shape libraries using keyboard shortcuts</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -497,7 +497,7 @@
 
       <div class="w-lg-60 mx-lg-auto">
         <div class="mb-4">
-          <h1 class="h2 font-weight-medium">Support for hand-drawn diagrams with rough.js</h1>
+          <h1 class="h2 font-weight-medium">Work faster with the shape libraries using keyboard shortcuts</h1>
         </div>
 
         <!-- Author -->
@@ -525,7 +525,7 @@
                 </div>
                 <div class="media-body font-size-1 ml-3">
                   <span class="h6 font-weight-medium"><a href="blog-profile.html">diagrams.net</a> </span>
-                  <span class="d-block text-muted">23 Jun 2020</span>
+                  <span class="d-block text-muted">06 Jul 2020</span>
                 </div>
               </div>
             </div>
@@ -533,10 +533,10 @@
               <div class="d-md-flex justify-content-md-end align-items-md-center">
                 <h2 class="text-secondary font-size-1 font-weight-medium text-uppercase mb-0">Share:</h2>
 
-                <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="https://www.facebook.com/sharer.php?u=/blog/rough-style" data-toggle="tooltip" data-placement="top" title="Share this page on Facebook">
+                <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="https://www.facebook.com/sharer.php?u=/blog/shortcut-shape-library" data-toggle="tooltip" data-placement="top" title="Share this page on Facebook">
                   <span class="fab fa-facebook-f btn-icon__inner"></span>
                 </a>
-                <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="https://twitter.com/share?text=Support for hand-drawn diagrams with rough.js&url=/blog/rough-style" data-toggle="tooltip" data-placement="top" title="Share this page on Twitter">
+                <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="https://twitter.com/share?text=Work faster with the shape libraries using keyboard shortcuts&url=/blog/shortcut-shape-library" data-toggle="tooltip" data-placement="top" title="Share this page on Twitter">
                   <span class="fab fa-twitter btn-icon__inner"></span>
                 </a>
               </div>
@@ -545,36 +545,51 @@
         </div>
         <!-- End Author -->
 
-        <p>A more relaxed and informal style for shapes, fills and lines is often used in infographics, teaching materials, maps and reports so that the diagrams are little less sterile and boring. The rough style adds a hand drawn shading options, rough outlines and connectors, and handwritten text labels.</p>
+        <p>There are many keyboard shortcuts you can use when working with shapes from the shape libraries on the left of the drawing canvas in diagrams.net.</p>
 
-<p>We spent a couple of hours integrating <a href="https://roughjs.com/">rough.js</a> to update our existing, and fairly limited, comic style, and the result is pretty useful.</p>
-
-<p><strong>Note:</strong> This rough style is available in version 13.3.1 onwards.</p>
-
-<h2 id="apply-the-rough-style">Apply the rough style</h2>
+<h2 id="insert-and-connect-shapes">Insert and connect shapes</h2>
 
 <ol>
-  <li>Select one or more shapes and connectors that you want to roughen.</li>
-  <li>In the format panel on the right, click <em>Sketch</em> to apply the rough style to your selected shapes, labels and connectors.</li>
+  <li>Select a shape on the drawing canvas.</li>
+  <li>Hold down <code class="highlighter-rouge">Alt</code> and click on the shape you want to insert below the selected shape.</li>
+  <li>Hold down <code class="highlighter-rouge">Alt</code> and <code class="highlighter-rouge">Shift</code> to insert and connect a shape to the right of the select shape.</li>
 </ol>
 
-<p><img src="/assets/img/blog/sketch-format-panel.png" width="600" alt="Select shapes, click Sketch in the format panel, and save your diagram to make it more informal" /></p>
+<p><img src="/assets/img/blog/shapes-insert-connect.gif" width="400" alt="Replace a shape easily - select a shape, then hold down Shift and click on your target shape in the shape library" /></p>
 
-<h3 id="use-the-rough1-url-parameter">Use the <code class="highlighter-rouge">rough=1</code> URL parameter</h3>
+<h2 id="add-a-shape-to-a-connector">Add a shape to a connector</h2>
 
-<p>Alternatively, add <code class="highlighter-rouge">rough=1</code> as a URL parameter so the whole diagram has that style. For example:</p>
+<ol>
+  <li>Select a connector on the drawing canvas where the end is not connected to a shape.</li>
+  <li>Click on a shape in the shape library to attach it to the connector.</li>
+</ol>
 
-<p><a href="https://app.diagrams.net/?lightbox=1&amp;rough=1&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fjgraph%2Fdrawio-diagrams%2Fmaster%2Fblog%2Fgitflow-examples.drawio"><code class="highlighter-rouge">https://app.diagrams.net/?lightbox=1&amp;rough=1&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fjgraph%2Fdrawio-diagrams%2Fmaster%2Fblog%2Fgitflow-examples.drawio</code></a></p>
+<h2 id="overlap-shapes">Overlap shapes</h2>
 
-<p><a href="https://app.diagrams.net/?lightbox=1&amp;rough=1&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fjgraph%2Fdrawio-diagrams%2Fmaster%2Fblog%2Fgitflow-examples.drawio"><img src="/assets/img/blog/rough-gitflow-example.png" width="600" alt="A sketchy gitflow using the rough style" /></a></p>
+<p>If you want to <a href="/blog/shortcut-overlay-shapes.html">make two shapes overlap completely</a>, you need to disable the replace shape feature. Similarly, when you drag and drop a shape onto a container shape in diagrams.net, the new shape is added inside the container shape.</p>
 
-<p><a href="/doc/faq/supported-url-parameters.html">See a description of all of the supported URL parameters.</a></p>
+<p>To overlay shapes, hold down <code class="highlighter-rouge">Alt</code> or <code class="highlighter-rouge">Shift</code> as you drag a shape from the shape library.</p>
 
-<p>The rough style can make flowcharts a little less intimidating in training and onboarding materials.</p>
+<p><img src="/assets/img/blog/shapes-overlapping.png" width="600" alt="Overlap shapes in diagrams.net by holding down Alt or Shift when you drag and drop one from the shape library" /></p>
 
-<p><br /><a href="https://app.diagrams.net/?rough=1#R7Vxtc6o4FP41frwdXsTqx2q1d3ftbKftTnf2W4SjZAVCQ6h6f%2F0mEESML%2FhOZ%2Bk4CichQJ4nzzk5gTbMnj9%2Foih0n4kDXsPQnHnDfGwYRts0%2BbcwLFLDvdZMDROKndSk5YY3%2FAtSo55ZY%2BxAJG2piRHiMRwWjTYJArBZwYYoJbNitTHxnIIhRBNQDG828lTrB3aYK2%2FL0nL7T8ATNzuzrskSH2WVpSFykUNmBRPM2YAETF7iC1AfBRAwXvKM6BRow%2Bq7jIk7fWgYA%2F4Zi9p3E0ImHqAQR3c28bnZjniVwRj52BPdvNJQVzbET2f2G2aPEsLSLX%2FeA09AVYRhsKV02Q9UtFvigHDe%2Bfv9H%2Fz5%2B8vo830I3T5ynR%2BylS%2FkxbJ%2FX%2Fqvf3DLXy%2F86%2BO395%2F8h9%2BrNnx4f%2B%2FLfmOLDAzehaHYZGgkTF3bxZ4zRAsSs8ya7XU59EMcJNTRRVXixX6waokYokwSrqlxg8t8T5bNXMzgLUS2KJxxYqcteCiMcHLqR3EABTumEf6CV4jSdoQV5iEKHLkTEhwwoP0vSGEWNgHim7yp9NJ8bMvtMfa8HvEITW7YdBC0x3ZysZRMYaVES%2F5ka4MNyGcUkudLr09vLtvK2GzIs35kLDZFVyDbjSk8iRt%2FtLhBRT%2BDEiiD%2BYpJsuEJiA%2BMLngVWdqRpJdC0JS7s3xUte6lzV0ZUWY2oJAcJpNlyzn7%2BIYk4AFkNBQyKoQDh4uB3CWUuWRCAuT1c2s3tw4JCSWK%2FwJjC9nlKGakSK6j8G7ZbRiNj8KbkjhwwFnS%2Fhzo7xrdEYmpDTvq3UsdR3QCO9uTFQUKOxlGwUOMj8Oi%2Bp%2BbL6bCl14cMd44VYVqhn2PAyM6k1D8iyOCvFVJSK7N6vIPZ3dPu7MaFj%2Bux%2Ff1fJ9%2FRHXKeiTgsCGc9D6giM0gYreUsB0UHo%2FHhq1SOCBJb9xKrXZ6o%2F0SdqBm6e1LaVZT4eAAkoCLYcqH%2BA4eygAJ5dhXkT2OBW2n%2BS3YY5Zmz3wre3Tzquyxagd3EuTNkg6uVdLBVcu%2FtRRteRMKoXCm2N2blGKFC4jaEiprn%2BNo27DBcfCSUdtqWreMdXdKcenxbxQD4JYqB50NatC8lBjcq64Ec9k2tBGimPuGHbhr%2B3G%2FtgZUGGjduDHSbQXpZzQFIVAUBRGyGSZBHTpUOXTQ71UKmdeNPDsKiV7hMxbzEEPj3olBrRdrw%2B3b6kWWe13BuhsvapxPxVm3qga0mo%2BV08kQ6HRR%2B4Qq%2BwTr9vNJvc6YnpiBKpsy1SU99udMZbRakTmlriZNHykOprUz2SbF33U6qaupyX6gZiTr5MF54L597GCpQeKWxEG9GvIdApCDV0OMDRTcuBxyufhDTVkeH7NWhDFbHFclGWOVpsyBSyCXY4ya9XyiAKIH7W2Luf%2FbkKR1KLxrPurmLkpNfNbyUGV5KJ3mvJw%2BqGlOhTL1FPcgFshBuHeKm6nF3iluBklFpriGmi19sG0Iefe3PBGXjmiBP63PWDyDmSDyI1UF8cSj3gznSa9m5XxrIn5DtPATMGu3VFT1o%2FOut%2FZLhpp2%2FaBYJEM0BxjCXnQm6ohlPR7XhKrXkw%2FSOsSOE3LtJdAoZdtwVDNKDXT0coRqXYxQhkIoucK7OcmWwR9SYoN4dnwv%2BsieThLB%2BTNmHg6gJoGR41kVWVFzrXW4W%2BVwt%2FQKzsXCXUNN2tbh7lWegdfLPgTfOXewmxz6QClarFSQadi85RdhWAmh1rWutfb2z5762RpkTtb0CnLqLm%2FlBDarKemazVdhc6fs1E2v1tStRP64JswlCLN8l3PverZ2bsYcpX%2FLt9BK6t96%2Fevon5rcrul8HW9eOnd1djqfJoDtmiDX0TujrN6ZldA7yzxM79brZ48nHKl3fDd%2FUz2tnv93AbP%2FHw%3D%3D" target="_blank"><img src="/assets/img/blog/rough1.png" width="600" alt="A flowchart styled by rough.js" /></a></p>
+<h2 id="replace-a-shape">Replace a shape</h2>
 
-<p><br /><a href="https://app.diagrams.net/#R7V1dd6o4F%2F41Xp4uIBDwslU7Z9Y67XRNz5p555JqVN5B4gD2Y379JBCU7ESPegBD294UE9jEnf3szyQO0Gj1%2Bksarpd3dEbigWPNXgdoPHAcO8AW%2B8db3kSL7YqWRRrNyrZaw2P0LxE3Vq2baEYy0VY25ZTGebSWG6c0Scg0l9rCNKUv8m1zGs%2BkhnW4INIweMPjNIyJctuf0Sxflq2Bg3ftX0m0WFZvtvGw7HkKp38vUrpJxPsGDpoXf2X3Kqxoifdmy3BGX2pNaDJAo5TSvLxavY5IzJkrs%2B12T%2B923ClJ8mMecMoHnsN4Q6oR45g9erPmo8vfBEfwPxs%2BpJtVmC6iZICuWa%2B1ZhN%2BU3wr3vglp%2Buyw606cvKafwnjaCGemLJRkbTWNyNTmoZ5RMUNjG8kjaOEFPdUL2VXC%2FG%2FGFqWpzRZVK0PKZ2SLGNP29UNT%2BmAf%2B9b%2BCBrkp%2Btdaxh23IPkdMZE5N5XvYEogd%2Bs8e3LCcrdsNjvmGgOTCqNt7%2BkBImMeU0aF%2FtSC91nkmaRwws1%2BXMjlfRbMb7bsRUj7fzTNmt87gQ8HnEBA%2FdzGmSC7zbjvh8G66imKuKryR%2BJpw0Z3%2B%2BivlN7LLAE5mJTwUFMRhbSMPfW5gifgd71YjGNC2Giyb49nY0Yu1Tuoqm4ikVKAI7%2FMuR11qTAM4vhK5InrLJsUSvg4Q6eAOfX3Yqw6402rKmLoaiLRRaarElvUMquxBg1QMXKcCdJGy2CUkjLt5gxl6WUU4e1%2BGUf35hSls3WXun9WSO3962xHFX5rjtqBwfahiOG2C4qzD81%2BSZZDlNs%2FfK7spoV%2FLt2Z1x21O4%2Fdv9l%2FHk7vp%2BzLXkX4%2FfJ3fsYjz5Y%2FLtt4e7yf13ZRKYaV3zy7WwD%2Bjm56YlK7WWdWW5vnfeNI1GraDCsq6G9T9bmjY0VKfNtTTz5jUwb%2Fg9%2BRNO%2F%2F2J6ySM37Io%2B7Trx%2BMJDWW9Z7sd2nW%2F%2FwD6Aaz2QsdCvcXbtyjLWfcDzbLoiVHu2IHfhQ803vDJ%2B8T7CXjHATCYvmowW8N78IHx7vYW72OShxGfxtGSZmRP1Nwi3gXMP1F%2BPMo9DKIZt0OUDz8wyr3eovyevHCbKoxrtxAfk4zP5yfAjwc4SFd4FZi7AHhF90MiHPcb4Zfx1bt964jFBHm6mX56DacpFTsIrtz9ubVudYxarLsLk3BBVvz7vdMcNAYcx9aVVf9zFP63lZK21ZLL%2B2c%2F8tCVV%2Be3XIDBnir%2FrfFfrcB8gJIXcuXcvi%2FrHwd0dzcbaoXmD5LM3nE1zHOHOl5fAAlIV2UBTCezBanYltDCD0zopNa442WNd8Mhx7jCZedYbmZ0k07FCIS6zJmLQsRdYph8bAc5XremukrVtjElMXN6n4k0CB1rxTseaMR19a5yJs2hUgErv454aDc%2FCh0bELIhoZIJCqFiorff%2B7i51xUIjJt7twdzH4A5gy7asZOPACFIp7m5tyud9RGDTL%2FfQeaF0kiPTPryDaccJrOuX%2F6dZHnhmn3Gm8e7e0iON13Z3%2Bsy3vR06gaammR2zdfbXszSDFVLU6nJH5qan%2FYePBaLBvYQ%2Byw4tG3kSXPlBoDisQbFtawr5PgBDgLm33vBUKaL23MuPDXDwPPQKcMJ15bM7USv1xwMm6TIJDFs5m%2BKTHBbwSeXefwM%2Fd%2B5nRl%2F8XRQbjpZg2VO6RasIQ1YnCbAomYH%2BsS6bTVs6w2pa15aY50a2I%2FpdMPTKtWa5C33UsqXOWQRU%2B4hN%2BHrlP6fTHM16LycEAZyigRp6oytcVINylWNXdPOJH6iLzV1fVM0sI4lTaN%2FmU0M47b1t6fqb9MiBU%2F27z10ZqBgA0IuJLRHkTMDG77VblvzG7IDdglUupEv7QFhFyXFs63EiekHA6TMUaXMM1zKrKakDBJqSspA2Itww1KmJjomcfjEA1BSswhTylfe3T6RhMyjvNZRBKrmmAVkXdAs6BaZmQ1YjVnAhgEW5n0qNXu6vw8IOZBQQ4h1wQIJZDeMWN0qJ7PFDJtvF5DXlJh5HYkZdD%2BcZsWsIl83DK9RlWmq1P9MjiCMMQOBXL%2BWoy5mU6USU4A6sxFYTfbcE56TDTmdnVUlpbgZFHC5gS2x1JFZ6sm9VndxLXYUlj6kdJGWie4dR9c0NSmA9VzvgIgytSbzs0MRVVMsfeAnBmbXdrGOv10wUE209IGBPoAw0JlY29sFO%2FuXbdH4O9WqMmMcHpi%2BsPUm8%2BQyLSALqQKyjfncckq6OgilMWeoqVxMVX%2FjTQl7%2Ff8GfKuz41Wf%2Fxp0UMwJeiCe2%2FTfzy4awYBQi4tG8ImLRgzQVH4PRAGDxaiy54ngUq9jBcM%2FSFZZQdagmPQvT6TRGKYF8J4P4uHgTLnYFv%2F3aZ6GbJYy4IYzu%2FjEPFFGFjySrwta17nHwDCZQjCVd66ugTnBY7XLyTIFl1qKKmlTMlWJ7OGkUHFSnUGRDfMlDhkQ1%2FrB4u62IhtfTQZN%2FtlE63Knw5ad2ZpMoznzGs3KsWHbA3zsLib0nYZMaM0f71rZ%2BYYpu20p9GdLoxgQaqs0imEJtuFCi68mwswWMo0zb5qXBqsWZwsZPGegMyFDDQuZmiz83bzkP64e2R52Bmym253qV9OB23N5akbzevYcsshowblYby%2FWZ1vfolVU1qxMYjKConaplKvfv6VHmgXKxuk%2B4Jx7Z0eogJALCbUUoboNr3Dz%2B5cv0%2FhxQ9PEDPpx5%2B64gg6he%2BSWq5PFDJryoGEx61%2B%2Bze6DnAFz5Z%2FtygFC%2BEhX7hxRUHNiX8N09sJmY1Dt3ao8hUc6z0UHj8BNchQcsFVFs12pLdcgUHMWDYCJvEZ5UQoT17wMZl0V5%2F92vq0JmYYzYO39cxfGQ7cBt7Qw3vX172lKnweOIoKa9RW%2Fm7a%2BAi6gkrccMgxfyNkPmkpzdGge7R7g1gHu054y5qkodtChpY0t7loMjlrWZB7sILDko10g7pzucNe%2FdU2Vn2E07uyDAPHdM63nD3AHyTa1%2FccFZqJpW6pmevoAasfztPnHnRa8lDFtKqXRVc1AC2nXMEgDh%2FJsDNvQMz0StecAq39JB03O4egzHj63b%2BrfA3%2FkoukUatC%2FzWA65920VL0nn0EXgMMGtkvEThe7Q4fbuZBsUwG53a4QVjIuHVKYZvKZEobl0LY7sSqe4O6chOqs1Rq%2FRtzcF2t8eMFyVOdbdaBV1RBHT2mYRiaVh22wtdbF2r1iXbDW6Z0%2B1JldyzB9CGMfW%2Fa3zzfDB4Oq1s5UgMa%2FaX3Yw4yaJgwwzSjv%2B%2BGBk4UOEGrL7DpwPUfTYqYm5B6hsTDM6tpoeChu97B2T2wXdkNNxm1%2FGsRQXrrOwTMML2iD1ZySIpfPlX9oCjeRB84EgMxsi33s4%2B53yEstsPu1dzT5Dw%3D%3D" target="_blank"><img src="/assets/img/blog/rough2.png" width="600" alt="A flowchart styled by rough.js" /></a></p>
+<p>Instead of dragging and hovering over a shape to replace it, use the keyboard shortcut to be faster.</p>
+
+<ol>
+  <li>Select a shape on the drawing canvas.</li>
+  <li>Hold down <code class="highlighter-rouge">Shift</code>, then click on the new shape you want to use.</li>
+</ol>
+
+<p>The new shape will replace the one on the drawing canvas, but will be stretched to the original’s dimensions.</p>
+
+<p><img src="/assets/img/blog/shapes-replace-shortcut.gif" width="400" alt="Replace a shape easily - select a shape, then hold down Shift and click on your target shape in the shape library" /></p>
+
+<h2 id="diagram-faster-with-keyboard-shortcuts">Diagram faster with keyboard shortcuts</h2>
+
+<p>There are a large number of keyboard shortcuts which will make it easier and faster to create your diagrams. Print the following shortcut reference to keep all of them on hand.</p>
+
+<p><a href="https://app.diagrams.net/shortcuts.svg">See all of the keyboard shortcuts</a></p>
 
       </div>
 
@@ -587,10 +602,10 @@
             <div class="d-flex align-items-center">
               <h4 class="font-size-1 font-weight-medium text-uppercase mb-0 mr-3">Share:</h4>
 
-              <a class="btn btn-sm btn-icon btn-soft-dark btn-bg-transparent rounded-circle mr-2" href="https://www.facebook.com/sharer.php?u=/blog/rough-style" data-toggle="tooltip" data-placement="top" title="Share this page on Facebook">
+              <a class="btn btn-sm btn-icon btn-soft-dark btn-bg-transparent rounded-circle mr-2" href="https://www.facebook.com/sharer.php?u=/blog/shortcut-shape-library" data-toggle="tooltip" data-placement="top" title="Share this page on Facebook">
                 <span class="fab fa-facebook-f btn-icon__inner"></span>
               </a>
-              <a class="btn btn-sm btn-icon btn-soft-dark btn-bg-transparent rounded-circle mr-2" href="https://twitter.com/share?text=Support for hand-drawn diagrams with rough.js&url=/blog/rough-style" data-toggle="tooltip" data-placement="top" title="Share this page on Twitter">
+              <a class="btn btn-sm btn-icon btn-soft-dark btn-bg-transparent rounded-circle mr-2" href="https://twitter.com/share?text=Work faster with the shape libraries using keyboard shortcuts&url=/blog/shortcut-shape-library" data-toggle="tooltip" data-placement="top" title="Share this page on Twitter">
                 <span class="fab fa-twitter btn-icon__inner"></span>
               </a>
             </div>
