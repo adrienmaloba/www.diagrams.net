@@ -508,19 +508,19 @@
 
 <ol>
   <li>On the page that contains the diagram file you want to rename, click on the three dots <code class="highlighter-rouge">...</code> in the page menu, then select <em>Attachments</em>.
-<br /><img src="/assets/img/blog/view-attachments-confluence-server.png" width="300" alt="Open the page attachments on Confluence Server" /></li>
+<br /><img src="/assets/img/blog/view-attachments-confluence-server.png" style="width=100%;max-width:300px;height:auto;" alt="Open the page attachments on Confluence Server" /></li>
   <li>Click on <em>Properties</em> to the right of the draw.io diagram file you want to rename.
-<br /><img src="/assets/img/blog/edit-attachment-properties-confluence-server.png" width="600" alt="Edit the properties of the PNG and diagram file" /></li>
+<br /><img src="/assets/img/blog/edit-attachment-properties-confluence-server.png" style="max-width:100%;height:auto;" alt="Edit the properties of the PNG and diagram file" /></li>
   <li>Enter a new <em>File Name</em> in the text field, then click <em>Save</em>.
-<br /><img src="/assets/img/blog/rename-attachment-confluence-server.png" width="300" alt="Rename the draw.io diagram file attachment in Confluence Server" /></li>
+<br /><img src="/assets/img/blog/rename-attachment-confluence-server.png" style="width=100%;max-width:300px;height:auto;" alt="Rename the draw.io diagram file attachment in Confluence Server" /></li>
   <li>Repeat the steps above for the <code class="highlighter-rouge">.png</code> image file. Make sure the file name before the file extension matches the diagram file exactly so Confluence knows which preview to display.
-<br /><img src="/assets/img/blog/renamed-drawio-attachments-confluence-server.png" width="600" alt="The diagram file and the image file names much match when renaming files attached to a page in Confluence Server" /></li>
+<br /><img src="/assets/img/blog/renamed-drawio-attachments-confluence-server.png" style="max-width:100%;height:auto;" alt="The diagram file and the image file names much match when renaming files attached to a page in Confluence Server" /></li>
   <li>Return to view the page. The macro in the page now needs to be edited to display the new files. Edit the Confluence page.
-<br /><img src="/assets/img/blog/renamed-file-error-confluence-server.png" width="600" alt="Edit the Confluence page after you have renamed the attachments" /></li>
+<br /><img src="/assets/img/blog/renamed-file-error-confluence-server.png" style="max-width:100%;height:auto;" alt="Edit the Confluence page after you have renamed the attachments" /></li>
   <li>Use a free tool, such as <a href="https://marketplace.atlassian.com/apps/1210722/confluence-source-editor?hosting=server&amp;tab=overview">Confluence source editor app</a>, and edit the source. With this app, click <code class="highlighter-rouge">&lt; &gt;</code> in the toolbar on the right to edit the page source.
-<br /><img src="/assets/img/blog/edit-source-confluence-server.png" width="600" alt="Edit the source of the Confluence page" /></li>
+<br /><img src="/assets/img/blog/edit-source-confluence-server.png" style="max-width:100%;height:auto;" alt="Edit the source of the Confluence page" /></li>
   <li>Find the <code class="highlighter-rouge">diagramName</code> parameter, and change the file name inside the tag to be the new file name, minus its file extension, then click <em>Apply</em>.
-<br /><img src="/assets/img/blog/edit-page-source-rename-diagram-confluence-server.png" width="600" alt="Change the file name in the page source to rename a draw.io diagram" /></li>
+<br /><img src="/assets/img/blog/edit-page-source-rename-diagram-confluence-server.png" style="max-width:100%;height:auto;" alt="Change the file name in the page source to rename a draw.io diagram" /></li>
 </ol>
 
 <p>If the draw.io diagram is embedded on another page in your Confluence instance or on this page multiple times, you must update each macro in the page source to use the new file name.</p>

@@ -531,21 +531,21 @@
 
 <p><strong>Confluence Server:</strong> Go to your instance’s settings as an administrator, scroll down to the <em>draw.io add-on</em> section in the left navigation, and click on the <em>Configuration</em> tab.</p>
 
-<p><img src="/assets/img/blog/drawio-configuration-confluence-server.png" width="600" alt="draw.io Configuration in Confluence Server" /></p>
+<p><img src="/assets/img/blog/drawio-configuration-confluence-server.png" style="max-width:100%;height:auto;" alt="draw.io Configuration in Confluence Server" /></p>
 
 <p><strong>Confluence Cloud:</strong> As an administrator, go to the <em>draw.io Configuration</em> section in your instance’s <em>Settings</em>.</p>
 
-<p><img src="/assets/img/blog/drawio-configuration-confluence-cloud.png" width="600" alt="draw.io Configuration in Confluence Cloud" /></p>
+<p><img src="/assets/img/blog/drawio-configuration-confluence-cloud.png" style="max-width:100%;height:auto;" alt="draw.io Configuration in Confluence Cloud" /></p>
 
 <p><strong>Quip:</strong> As a site administrator, create a new diagram, then select <em>Diagrams &gt; Preferences &gt; Advanced</em>.</p>
 
-<p><img src="/assets/img/blog/drawio-configuration-quip.gif" width="600" alt="draw.io Configuration in Quip" /></p>
+<p><img src="/assets/img/blog/drawio-configuration-quip.gif" style="max-width:100%;height:auto;" alt="draw.io Configuration in Quip" /></p>
 
 <p><strong>Embedded:</strong> Add the <code class="highlighter-rouge">configure=1</code> URL parameter and the <a href="/doc/faq/embed-mode.html">JSON code for the configuration</a>.</p>
 
 <p><strong>Online and Desktop:</strong> Select <em>Extras &gt; Configuration</em> to customise diagrams.net.</p>
 
-<p><img src="/assets/img/blog/extras-configuration-menu.png" width="400" alt="Access the diagrams.net configuration via Extras &gt; Configuration" /></p>
+<p><img src="/assets/img/blog/extras-configuration-menu.png" style="width=100%;max-width:400px;height:auto;" alt="Access the diagrams.net configuration via Extras &gt; Configuration" /></p>
 
 <h2 id="format">Format</h2>
 
@@ -558,25 +558,25 @@
   <li>
     <p><code class="highlighter-rouge">customFonts</code>: An array of font family names to be added before <code class="highlighter-rouge">defaultFonts</code> (9.2.4 and later).
 <br /><strong>Note:</strong> Fonts must be installed on the server and all client devices, or be added using the <code class="highlighter-rouge">fontCss</code> option. (6.5.4 and later).
-<br /><img src="/assets/img/blog/custom-fonts-list-confluence-cloud.png" width="200" alt="Customise the fonts in diagrams.net" /></p>
+<br /><img src="/assets/img/blog/custom-fonts-list-confluence-cloud.png" style="width=100%;max-width:200px;height:auto;" alt="Customise the fonts in diagrams.net" /></p>
   </li>
   <li>
     <p><code class="highlighter-rouge">presetColors</code>: Colour codes for the upper palette in the colour dialog (no leading # for the colour codes).</p>
   </li>
   <li>
     <p><code class="highlighter-rouge">customPresetColors</code>: Colour codes to be added before <code class="highlighter-rouge">presetColors</code> (no leading <code class="highlighter-rouge">#</code> for the colour codes) (9.2.5 and later).
-<br /><img src="/assets/img/blog/preset-colours-new-defaults.png" width="200" alt="The default present colours can be customised in draw.io" /></p>
+<br /><img src="/assets/img/blog/preset-colours-new-defaults.png" style="width=100%;max-width:200px;height:auto;" alt="The default present colours can be customised in draw.io" /></p>
   </li>
   <li>
     <p><code class="highlighter-rouge">defaultColors</code>: Colour codes for the lower palette in the colour dialog (no leading <code class="highlighter-rouge">#</code> for the colour codes).
-<br /><img src="/assets/img/blog/large-palette-custom.png" width="200" alt="Modify the colour palettes easily with draw.io for Confluence Cloud" /></p>
+<br /><img src="/assets/img/blog/large-palette-custom.png" style="width=100%;max-width:200px;height:auto;" alt="Modify the colour palettes easily with draw.io for Confluence Cloud" /></p>
   </li>
   <li>
     <p><code class="highlighter-rouge">defaultColorSchemes</code>: Available colour schemes in the style section at the top of the format panel (use leading <code class="highlighter-rouge">#</code> for the colour codes). Possible colour keys are <code class="highlighter-rouge">fill</code>, <code class="highlighter-rouge">stroke</code>, <code class="highlighter-rouge">gradient</code> and <code class="highlighter-rouge">font</code> (<code class="highlighter-rouge">font</code> is ignored for connectors).</p>
   </li>
   <li>
     <p><code class="highlighter-rouge">customColorSchemes</code>: Colour schemes to be added before <code class="highlighter-rouge">defaultColorSchemes</code> (9.2.4 and later).
-<br /><img src="/assets/img/blog/style-colour-palette.png" width="200" alt="The default colour schemes in draw.io modify the style colour palette" /></p>
+<br /><img src="/assets/img/blog/style-colour-palette.png" style="width=100%;max-width:200px;height:auto;" alt="The default colour schemes in draw.io modify the style colour palette" /></p>
   </li>
   <li>
     <p><code class="highlighter-rouge">defaultVertexStyle</code> or <code class="highlighter-rouge">defaultEdgeStyle</code>: Defines the initial default styles for vertices and edges (connectors). Note that the styles defined here are copied to the styles of new cells, for each cell. This means that these values override everything else that is inherited from other styles or themes (which may be supported at a later time). Therefore, it is recommended to use a minimal set of values for the default styles. To find the key/value pairs to be used, set the style in the application and find the key and value via <em>Edit Style</em> (<code class="highlighter-rouge">Ctrl+E</code>) (6.5.2 and later).
@@ -630,7 +630,7 @@
 } ]
 </code></pre></div>            </div>
             <p>This configuration produces the following <em>More Shapes</em> dialog when combined with <code class="highlighter-rouge">enabledLibraries: []:</code>
-<br /><img src="/assets/img/blog/configured-library.png" width="400" alt="The More Shape dialog in diagrams.net after configuring it with a custom library and library category" /></p>
+<br /><img src="/assets/img/blog/configured-library.png" style="width=100%;max-width:400px;height:auto;" alt="The More Shape dialog in diagrams.net after configuring it with a custom library and library category" /></p>
           </li>
         </ul>
       </li>
@@ -663,7 +663,7 @@
     <p><code class="highlighter-rouge">fontCss</code>: Defines a string with CSS rules for web fonts to be used in diagrams. This should be one or more <code class="highlighter-rouge">@font-face</code> rule, e.g. to use a font file attached to a Confluence page: <code class="highlighter-rouge">{"fontCss": "@font-face { font-family: 'Marvel'; src:  url(/confluence/download/attachments/720900/Marvel-Regular.ttf?api=v2) format('truetype')}"}</code>
 <br />The fonts in this section are used for displaying diagrams in the editor and creating images in Google Chrome, Firefox and Microsoft Edge. All other browsers require the font to be installed on the server-side. To create images in the browser, the font must be on the same domain and contain a CORS header, or it will be proxied via the Confluence server.
 <br /><strong>Confluence Server</strong>: The <em>Global Stylesheet</em> under <em>Stylesheet</em> in the <em>Look and Feel</em> section of the Confluence administration area is used to view the diagram in the page and to print it from the lightbox. In this case, it should match <code class="highlighter-rouge">fontCss</code> with the following rule:
-<br /><img src="/assets/img/blog/configure-font-stylesheet-confluence-server.png" width="600" alt="Configure COnfluence Server to use fontCss rules in diagrams.net" />
+<br /><img src="/assets/img/blog/configure-font-stylesheet-confluence-server.png" style="max-width:100%;height:auto;" alt="Configure COnfluence Server to use fontCss rules in diagrams.net" />
 <br /><strong>Confluence Cloud</strong>: The font URL must be public and must allow access to the diagrams.net origin (CORS header):
 <br /> <code class="highlighter-rouge">"fontCss": "@font-face { font-family: 'Waltograph'; src:  url(https://fontlibrary.org/assets/fonts/waltograph/23a40698cd1bb84f930b7a0884c134a6/ab260a56f2b852b78f81eac337e0a2fc/WaltographRegular.otf) format('opentype')}" and "customFonts": ["Waltograph”]</code>
 <br /><strong>Note:</strong> All fonts will be downloaded to the client when they create an image and save the diagram, so the number of custom fonts should be kept to a minimum. The external image service does currently not support custom fonts.</p>
@@ -834,7 +834,7 @@
 <br /><img src="/assets/img/blog/configuration-browser-local-storage.png" width="400" alt="The diagrams.net configuration is stored in your browser's local storage" /></p>
 
 <p>The current settings of the editor (such as the recent colours, current open libraries, etc.) persist in your browser in local storage under the key <code class="highlighter-rouge">.drawio-config</code>:
-<br /><img src="/assets/img/blog/current-settings-local-storage-browser.png" width="400" alt="Current settings for diagrams.net are saved in local storage in your browser" /></p>
+<br /><img src="/assets/img/blog/current-settings-local-storage-browser.png" style="width=100%;max-width:400px;height:auto;" alt="Current settings for diagrams.net are saved in local storage in your browser" /></p>
 
 <p>You can add <code class="highlighter-rouge">defaultEdgeLength</code> and <code class="highlighter-rouge">autosaveDelay</code> directly to <code class="highlighter-rouge">.drawio-config</code> to override the default values for the web app in your browser.</p>
 

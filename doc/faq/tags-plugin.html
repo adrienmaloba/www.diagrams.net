@@ -518,13 +518,13 @@
 
 <p>Tags are a space-separated list of words stored in the tags property of a shape’s properties, or metadata. Select a shape, then click <em>Edit &gt; Edit Data</em> to see a shape’s properties (or right-click and select <em>Edit Data</em> or press <code class="highlighter-rouge">Ctrl+M</code>).</p>
 
-<p><img src="/assets/img/blog/edit-data-tags.png" width="400" alt="Tags can be added or deleted via the shape's properties" /></p>
+<p><img src="/assets/img/blog/edit-data-tags.png" style="width=100%;max-width:400px;height:auto;" alt="Tags can be added or deleted via the shape's properties" /></p>
 
 <h3 id="see-what-tags-have-been-applied">See what tags have been applied</h3>
 
 <p>When you hover over a shape, the tag will appear as a tooltip.</p>
 
-<p><img src="/assets/img/blog/hover-tags-metadata.png" width="200" alt="Hover over a shape to see its tags" /></p>
+<p><img src="/assets/img/blog/hover-tags-metadata.png" style="width=100%;max-width:200px;height:auto;" alt="Hover over a shape to see its tags" /></p>
 
 <p>Alternatively, you can look at shape’s properties. Select a shape, then press <code class="highlighter-rouge">Ctrl+M</code>.</p>
 
@@ -537,7 +537,7 @@
   <li>Type the name of the tag, and click <em>Hide</em> or <em>Show</em>.</li>
 </ol>
 
-<p><img src="/assets/img/blog/tags-dialog-show-hide.gif" width="600" alt="Use the Tags dialog to show and hide shapes with tags" /></p>
+<p><img src="/assets/img/blog/tags-dialog-show-hide.gif" style="max-width:100%;height:auto;" alt="Use the Tags dialog to show and hide shapes with tags" /></p>
 
 <h3 id="add-a-tag-to-a-shapes">Add a tag to a shapes</h3>
 
@@ -547,7 +547,7 @@
   <li>Click <em>Extras &gt; Hidden Tags</em>. Select a shape or multiple shapes.</li>
   <li>If you want to apply an existing tag, click on the existing tag name.</li>
   <li>To add a new tag, type its name into the text field, and press <code class="highlighter-rouge">Enter</code>.
-<br /><img src="/assets/img/blog/add-tags.png" width="600" alt="Add a tag via the Hidden Tags dialog" /></li>
+<br /><img src="/assets/img/blog/add-tags.png" style="max-width:100%;height:auto;" alt="Add a tag via the Hidden Tags dialog" /></li>
 </ol>
 
 <h3 id="remove-a-tag-from-a-shape">Remove a tag from a shape</h3>
@@ -556,7 +556,7 @@
 <ol>
   <li>Click <em>Extras &gt; Hidden Tags</em>.</li>
   <li>Select a shape or multiple shapes, and click on one of the blue tag names in the dialog. This removes the tag from the shape. For example, to remove the <code class="highlighter-rouge">manage</code> tag from the orange shapes, first select them, click on <em>manage</em> in the dialog.
-<br /><img src="/assets/img/blog/remove-tags.png" width="600" alt="Remove a tag via the Hidden Tags dialog" /></li>
+<br /><img src="/assets/img/blog/remove-tags.png" style="max-width:100%;height:auto;" alt="Remove a tag via the Hidden Tags dialog" /></li>
 </ol>
 
 <h2 id="permanently-load-the-tags-plugin">Permanently load the tags plugin</h2>
@@ -565,9 +565,9 @@
 
 <ol>
   <li>From the menu, select <em>Extras &gt; Plugins</em>.
-<br /><img src="/assets/img/blog/extras-plugins.png" width="400" alt="Open the plugins list" /></li>
+<br /><img src="/assets/img/blog/extras-plugins.png" style="width=100%;max-width:400px;height:auto;" alt="Open the plugins list" /></li>
   <li>Click <em>Add</em>.
-<br /><img src="/assets/img/blog/add-plugin.png" width="200" alt="Add a new plugin" /></li>
+<br /><img src="/assets/img/blog/add-plugin.png" style="width=100%;max-width:200px;height:auto;" alt="Add a new plugin" /></li>
   <li>Paste <code class="highlighter-rouge">/plugins/tags.js</code> into the URL field, then click <em>Add</em>, then click <em>Apply</em>.</li>
 </ol>
 
@@ -579,7 +579,7 @@
   <li><a href="https://github.com/jgraph/drawio/raw/master/src/main/webapp/plugins/tags.js">Download the tags plugin from GitHub</a> and attach it to a page in your instance.</li>
   <li>As an administrator, go to the <em>draw.io Configuration</em> section, in the left-hand menu of your Confluence Settings. Click on the <em>Configuration</em> tab.</li>
   <li>Add the plugins option to the JSON code in the UI configuration. Use the relative URL to the attachment you saved in step 1. For example: <code class="highlighter-rouge">"plugins": [ "/download/attachments/55279729/tags.js" ]</code>
-<br /><img src="/assets/img/blog/tags-plugin-confluence-server.png" width="600" alt="Add the tags plugin to draw.io in Confluence Server" /></li>
+<br /><img src="/assets/img/blog/tags-plugin-confluence-server.png" style="max-width:100%;height:auto;" alt="Add the tags plugin to draw.io in Confluence Server" /></li>
   <li>Click <em>Save Changes</em>.</li>
 </ol>
 
@@ -590,7 +590,7 @@
 <ol>
   <li>Go to the <em>draw.io Configuration</em> tab in the <em>draw.io Configuration</em> section of your Confluence Cloud settings.</li>
   <li>As an administrator, add <code class="highlighter-rouge">{ "plugins": ["tags"] }</code> to the JSON code.
-<br /><img src="/assets/img/blog/tags-plugin-confluence-cloud.png" width="600" alt="Add the tags plugin to draw.io in Confluence Cloud" /></li>
+<br /><img src="/assets/img/blog/tags-plugin-confluence-cloud.png" style="max-width:100%;height:auto;" alt="Add the tags plugin to draw.io in Confluence Cloud" /></li>
   <li>Click <em>Save</em>.</li>
 </ol>
 

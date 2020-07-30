@@ -512,7 +512,7 @@
 
 <ol>
   <li>Determine the name of the diagram attachment first. As an administrator, look at the page source - the underlying format that Confluence uses to describe the page. Click on <em>… &gt; View Storage Format</em> in the top right to see a page’s source.
-<br /><img src="/assets/img/blog/confluence-cloud-view-storage-format.png" width="200" alt="Click on ... &gt; View Storage Format to see the source of a page in Confluence Cloud as an administrator" /></li>
+<br /><img src="/assets/img/blog/confluence-cloud-view-storage-format.png" style="width=100%;max-width:200px;height:auto;" alt="Click on ... &gt; View Storage Format to see the source of a page in Confluence Cloud as an administrator" /></li>
   <li>Within the source, look for the <code class="highlighter-rouge">structured-macro</code> with the name <em>“drawio”</em>.</li>
   <li>Within the this macro definition, look for the <code class="highlighter-rouge">diagramName</code> parameter. In the following example, the diagramName is <em>rulers-measurements.drawio</em>.</li>
 </ol>
@@ -539,7 +539,7 @@ ac:name="height"&gt;911&lt;/ac:parameter&gt;&lt;/ac:structured-macro&gt;&lt;/p&g
 <ol>
   <li>Copy the diagram name and enter it into Confluence’s search function. <br />
 <strong>Tip:</strong> Restrict the search results to just <em>Attachments</em>.
-<br /><img src="/assets/img/blog/attachment-search-diagram-name-confluence-cloud.png" width="600" alt="Filter the search results to attachments to find the moved diagram files" /></li>
+<br /><img src="/assets/img/blog/attachment-search-diagram-name-confluence-cloud.png" style="max-width:100%;height:auto;" alt="Filter the search results to attachments to find the moved diagram files" /></li>
   <li>If the <code class="highlighter-rouge">revision</code> parameter is <code class="highlighter-rouge">1</code>, you can simply copy the diagram attachment back to your original page to fix the problem with the draw.io macro.</li>
   <li>If the <code class="highlighter-rouge">revision</code> parameter is higher:
     <ul>
