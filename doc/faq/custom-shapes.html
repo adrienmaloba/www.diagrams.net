@@ -602,31 +602,31 @@
 <p>There are 4 types of geometry elements:</p>
 
 <ul>
-  <li><strong><code class="highlighter-rouge">&lt;rect&gt;</code></strong> - attributes “x”, “y”, “w”, “h”, all required decimals</li>
-  <li><strong><code class="highlighter-rouge">&lt;roundrect&gt;</code></strong> - attributes “x”, “y”, “w”, “h”, all required decimals. Also “arcsize” is an optional decimal attribute defining how large the corner curves are.</li>
-  <li><strong><code class="highlighter-rouge">&lt;ellipse&gt;</code></strong> - attributes “x”, “y”, “w”, “h”, all required decimals.</li>
+  <li><strong><code class="highlighter-rouge">&lt;rect&gt;</code></strong> - attributes <code class="highlighter-rouge">"x"</code>, <code class="highlighter-rouge">"y"</code>, <code class="highlighter-rouge">"w"</code>, <code class="highlighter-rouge">"h"</code>, all required decimals</li>
+  <li><strong><code class="highlighter-rouge">&lt;roundrect&gt;</code></strong> - attributes <code class="highlighter-rouge">"x"</code>, <code class="highlighter-rouge">"y"</code>, <code class="highlighter-rouge">"w"</code>, <code class="highlighter-rouge">"h"</code>, all required decimals. Also <code class="highlighter-rouge">"arcsize"</code> is an optional decimal attribute defining how large the corner curves are.</li>
+  <li><strong><code class="highlighter-rouge">&lt;ellipse&gt;</code></strong> - attributes <code class="highlighter-rouge">"x"</code>, <code class="highlighter-rouge">"y"</code>, <code class="highlighter-rouge">"w"</code>, <code class="highlighter-rouge">"h"</code>, all required decimals.</li>
   <li><strong><code class="highlighter-rouge">&lt;path&gt;</code></strong> - a general case of geometry, used for more complex shapes.</li>
 </ul>
 
-<p>Path is a similar structure as path in SVG. It should start with a <move> where "x" and "y" define the coordinate. After move, an arbitrary number of geometry elements should follow.</move></p>
+<p>Path is a similar structure as path in SVG. It should start with a <code class="highlighter-rouge">&lt;move&gt;</code> where <code class="highlighter-rouge">"x"</code> and <code class="highlighter-rouge">"y"</code> define the coordinate. After move, an arbitrary number of geometry elements should follow.</p>
 
 <p>Path elements can be:</p>
 <ul>
-  <li><strong><code class="highlighter-rouge">&lt;move&gt;</code></strong> - to attributes required decimals (x,y).</li>
-  <li><strong><code class="highlighter-rouge">&lt;line&gt;</code></strong> - to attributes required decimals (x,y).</li>
-  <li><strong><code class="highlighter-rouge">&lt;quad&gt;</code></strong> - to required decimals (x2,y2) via control point required decimals (x1,y1).</li>
-  <li><strong><code class="highlighter-rouge">&lt;curve&gt;</code></strong> - to required decimals (x3,y3), via control points required decimals (x1,y1) and (x2,y2).</li>
+  <li><strong><code class="highlighter-rouge">&lt;move&gt;</code></strong> - to attributes required decimals <code class="highlighter-rouge">(x,y)</code>.</li>
+  <li><strong><code class="highlighter-rouge">&lt;line&gt;</code></strong> - to attributes required decimals <code class="highlighter-rouge">(x,y)</code>.</li>
+  <li><strong><code class="highlighter-rouge">&lt;quad&gt;</code></strong> - to required decimals <code class="highlighter-rouge">(x2,y2)</code> via control point required decimals <code class="highlighter-rouge">(x1,y1)</code>.</li>
+  <li><strong><code class="highlighter-rouge">&lt;curve&gt;</code></strong> - to required decimals <code class="highlighter-rouge">(x3,y3)</code>, via control points required decimals <code class="highlighter-rouge">(x1,y1)</code> and <code class="highlighter-rouge">(x2,y2)</code>.</li>
   <li><strong><code class="highlighter-rouge">&lt;arc&gt;</code></strong> - this doesn’t follow the HTML Canvas signatures, instead it’s a copy of the SVG arc command. The <a href="http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands">SVG specification</a> gives the best description of its behaviours. The attributes are named identically, they are decimals and all required.</li>
   <li><strong><code class="highlighter-rouge">&lt;close&gt;</code></strong> ends the current subpath and causes an automatic straight line to be drawn from the current point to the last move point of the current subpath.</li>
 </ul>
 
-<p>When the subpath is finished, there are two options. The first is to finish it with <code class="highlighter-rouge">&lt;/path&gt;</code>, which makes is visually open. The second option is to use <close> and then ``&lt;/path&gt;``, which will close the current subpath. A subpath is a segment which starts with a ``<move>`` and ends with a ``<close>`` or another ``<move>``. A single ``<path>`` can contain multiple subpaths, but all of them will use the same style. And if they overlap, the same fill rule applies as for SVG.</path></move></close></move></close></p>
+<p>When the subpath is finished, there are two options. The first is to finish it with <code class="highlighter-rouge">&lt;/path&gt;</code>, which makes is visually open. The second option is to use <code class="highlighter-rouge">&lt;close&gt;</code> and then <code class="highlighter-rouge">&lt;/path&gt;</code>, which will close the current subpath. A subpath is a segment which starts with a <code class="highlighter-rouge">&lt;move&gt;</code> and ends with a <code class="highlighter-rouge">&lt;close&gt;</code> or another <code class="highlighter-rouge">&lt;move&gt;</code>. A single <code class="highlighter-rouge">&lt;path&gt;</code> can contain multiple subpaths, but all of them will use the same style. And if they overlap, the same fill rule applies as for SVG.</p>
 
 <p>The first element of geometry will use the shadow style if needed, but the rest will not.</p>
 
 <h2 id="connections">Connections</h2>
 
-<p>The <connections> element defines the connection points of the stencil, where edges can be connected.</connections></p>
+<p>The <code class="highlighter-rouge">&lt;connections&gt;</code> element defines the connection points of the stencil, where edges can be connected.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;connections&gt;
     &lt;constraint x="0.5" y="0"/&gt;
@@ -636,9 +636,9 @@
 &lt;/connections&gt;
 </code></pre></div></div>
 
-<p>This adds 4 connection points at the corresponding coordinates. Note the coordinates are relative. x=0 is 0, x=1 is full width. Same for y.</p>
+<p>This adds four connection points at the corresponding coordinates. Note the coordinates are relative. <code class="highlighter-rouge">x=0</code> is <code class="highlighter-rouge">0</code>, <code class="highlighter-rouge">x=1</code> is full width. Same for <code class="highlighter-rouge">y</code>.</p>
 
-<p>When you hover over the unselected shape, connection points appear as a small x. Drag edges from these connection points or via the blue arrows.</p>
+<p>When you hover over the unselected shape, connection points appear as a small <code class="highlighter-rouge">x</code>. Drag edges from these connection points or via the blue arrows.</p>
 
 <p><img src="/assets/img/blog/custom-shape-example-connection-points.png" style="width=100%;max-width:200px;height:auto;" alt="Connection points have been added to the custom shape" /></p>
 
@@ -649,10 +649,10 @@
 <p>Style types are:</p>
 
 <ul>
-  <li><strong><code class="highlighter-rouge">alpha</code></strong> - defines the alpha level, the opposite of transparency. Attribute is <em>alpha</em> and range is 0-1, decimal. 0 being fully transparent and 1 being solid.</li>
-  <li><strong><code class="highlighter-rouge">strokewidth</code></strong> - defines the stroke width in pixels. Attributes are <em>width</em> which is decimal and fixed is optional, default 0 being scaling with resize and 1 for fixed stroke width regardless of scaling.
-dashed - toggles the dashed line style. Attribute is <em>dashed</em>. 0 for solid line, 1 for dashed.</li>
-  <li><strong><code class="highlighter-rouge">dashpattern</code></strong> - defines a custom dashed line style. Attribute is <em>pattern</em> and is an array. The numbers in the array define for how many points there is a line, how many points fo a pause, then how many points for a line again, and so on. Imagine the numbers as on/off alternating until the end of the array and then starting over. So <code class="highlighter-rouge">&lt;dashpattern pattern="5 1 8 1"/&gt;</code> defines a line length 5, pause of 1, even longer line of 8, another pause of 1 and then starting over.</li>
+  <li><strong><code class="highlighter-rouge">alpha</code></strong> - defines the alpha level, the opposite of transparency. Attribute is <em>alpha</em> and range is <code class="highlighter-rouge">0-1</code>, decimal. <code class="highlighter-rouge">0</code> being fully transparent and <code class="highlighter-rouge">1</code> being solid.</li>
+  <li><strong><code class="highlighter-rouge">strokewidth</code></strong> - defines the stroke width in pixels. Attributes are <em>width</em> which is decimal and <em>fixed</em> which is optional, default <code class="highlighter-rouge">0</code> being scaling with resize and <code class="highlighter-rouge">1</code> for a fixed stroke width regardless of scaling.
+dashed - toggles the dashed line style. Attribute is <em>dashed</em>. <code class="highlighter-rouge">0</code> for solid line, <code class="highlighter-rouge">1</code> for dashed.</li>
+  <li><strong><code class="highlighter-rouge">dashpattern</code></strong> - defines a custom dashed line style. Attribute is <em>pattern</em> and is an array. The numbers in the array define for how many points there is a line, how many points for a pause, then how many points for a line again, and so on. Imagine the numbers as on/off alternating until the end of the array and then starting over. So <code class="highlighter-rouge">&lt;dashpattern pattern="5 1 8 1"/&gt;</code> defines a line length 5, pause of 1, even longer line of 8, another pause of 1 and then starting over.</li>
   <li><strong><code class="highlighter-rouge">miterlimit</code></strong> - same as in SVG. Attribute is <em>limit</em>, a decimal number. It defines the “edginess” of line joins. The larger the number, the bigger spikes are allowed on sharp joins. The <em>limit</em> attribute defines the cutoff amount for spikes.</li>
   <li><strong><code class="highlighter-rouge">linejoin</code></strong> - defines the type of line joining. Attribute is <em>join</em> and can be <em>miter</em>, <em>round</em> or <em>bevel</em>, same as in SVG. Default is <em>miter</em>, and it produces straight sharp edges. <em>Round</em> as the name says gives rounded joins. <em>Bevel</em> is the middle solution, as it produces “rounded” joins, but instead a curve, a straight line.</li>
   <li><strong><code class="highlighter-rouge">linecap</code></strong> - defines the type of line end. Attribute is <em>cap</em> and can be <em>flat</em>, <em>square</em> or <em>round</em>, same as in SVG. Default is <em>flat</em>, and it produces a square edge right at the end of the line. <em>Round</em> as the name says gives rounded ending, after the line end, so the line is a bit longer. <em>Square</em> is the middle solution, as it produces “rounded” ends, but instead a circular curve, with a squared straight line at the end.</li>
@@ -672,16 +672,16 @@ dashed - toggles the dashed line style. Attribute is <em>dashed</em>. 0 for soli
   <li><strong><code class="highlighter-rouge">str</code></strong> - defines the actual text the stencil will include and is a string. <em>x</em> and <em>y</em> are label coordinates and use a decimal value.</li>
   <li><strong><code class="highlighter-rouge">align</code></strong> - defines the horizontal alignment and its self-descriptive values are: <em>left</em>, <em>center</em> and <em>right</em>.</li>
   <li><strong><code class="highlighter-rouge">valign</code></strong> -defines the vertical alignment. Its possible values are <em>top</em>, <em>middle</em> and <em>bottom</em>.</li>
-  <li><strong><code class="highlighter-rouge">vertical</code></strong> - 1 for text that is rendered vertically, 0 (default) for horizontal text.</li>
-  <li><strong><code class="highlighter-rouge">rotation</code></strong> - defines the text rotation and is in the range of 0.0-360.0.</li>
-  <li><strong><code class="highlighter-rouge">align-shape</code></strong> - 1 for a text label that rotates with the shape, 0 for a fixed text label.</li>
+  <li><strong><code class="highlighter-rouge">vertical</code></strong> - <code class="highlighter-rouge">1</code> for text that is rendered vertically, <code class="highlighter-rouge">0</code> (default) for horizontal text.</li>
+  <li><strong><code class="highlighter-rouge">rotation</code></strong> - defines the text rotation and is in the range of <code class="highlighter-rouge">0.0-360.0</code>.</li>
+  <li><strong><code class="highlighter-rouge">align-shape</code></strong> - <code class="highlighter-rouge">1</code> for a text label that rotates with the shape, <code class="highlighter-rouge">0</code> for a fixed text label.</li>
 </ul>
 
 <p>The styles related to text are:</p>
 <ul>
   <li><strong><code class="highlighter-rouge">fontsize</code></strong> - attribute is <em>size</em> and is a decimal value. Defines font size.</li>
-  <li><strong><code class="highlighter-rouge">fontstyle</code></strong> - attribute is <em>style</em> and is an ORed bit pattern of bold (1), italic (2) and underline (4), i.e. bold underline is “5”</li>
-  <li><strong><code class="highlighter-rouge">fontfamily</code></strong> - attribute is <em>family</em> and is a string defining the typeface to be used.</li>
+  <li><strong><code class="highlighter-rouge">fontstyle</code></strong> - attribute is <em>style</em> and is an ORed bit pattern of bold (<code class="highlighter-rouge">1</code>), italic (<code class="highlighter-rouge">2</code>) and underline (<code class="highlighter-rouge">4</code>), i.e. bold underline is <code class="highlighter-rouge">"5"</code></li>
+  <li><strong><code class="highlighter-rouge">fontfamily</code></strong> - attribute is <em>family</em> and is a string defining the type face to be used.</li>
 </ul>
 
 <p>After adding the text to the custom shape, as well as the connectors, click <em>Preview</em>.</p>
