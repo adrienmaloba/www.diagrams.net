@@ -513,7 +513,7 @@
   <li>Built-in libraries shown in the left panel</li>
   <li>Custom libraries shown in the left panel</li>
   <li>CSS for the editor appearance</li>
-  <li>Plugins to extend the diagram editor</li>
+  <li>Plugins to extend the diagram editor <em>(provided as-is, unsupported examples for developers)</em></li>
   <li>Width and height for entries in the left panel</li>
   <li>XML for blank diagrams and libraries</li>
   <li>Global variables</li>
@@ -672,7 +672,7 @@
     <p><code class="highlighter-rouge">plugins</code>: Defines an array of plugin URLs that should be loaded with the diagram editor. Plugins are JavaScript files that can modify the editor UI and behaviour. For example, to load the <code class="highlighter-rouge">text.js</code> plugin from a page attachment in Confluence, use the following configuration: <code class="highlighter-rouge">{"plugins": ["/confluence/download/attachments/720900/text.js?api=v2"]}</code> (6.5.4 and later.)
 <br /><a href="https://github.com/jgraph/drawio/tree/master/src/main/webapp/plugins">Plugin sources can be found in the Github project repository</a>. This option is ignored if the <code class="highlighter-rouge">configure=1</code> URL parameter is used to configure the editor. Use the short names for the plugins.
 <br /><strong>Confluence Cloud:</strong> use <code class="highlighter-rouge">{"plugins": ["anon;text"]}</code>. This is equivalent to the <code class="highlighter-rouge">p</code> URL parameter and limits possible plugins to only <a href="/doc/faq/plugins.html">trusted diagrams.net plugins</a>.
-<br /><strong>Note:</strong> All plugins are only available for the diagrams.net editor, and not the viewer.</p>
+<br /><strong>Note:</strong> All plugins are only available for the diagrams.net editor, and not the viewer. They are provided as-is, as unsupported examples for developers.</p>
   </li>
   <li>
     <p><code class="highlighter-rouge">thumbWidth/thumbHeight</code>: Defines the width and height for the entries in the left panel (6.5.4 and later).</p>
