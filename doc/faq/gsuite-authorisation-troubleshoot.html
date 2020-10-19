@@ -504,13 +504,18 @@
         <h1 class="h2 font-weight-medium">Troubleshoot authorisation problems with Google G Suite</h1>
       </div>
 
-      <p>If you are having trouble with your personal Google account, see how to <a href="/doc/faq/google-drive-connection-problems.html">fix connection issues with Google Drive</a>.</p>
+      <p>If you are having trouble with your personal Google Drive account, see how to <a href="/doc/faq/google-drive-connection-problems.html">fix connection issues with Google Drive</a>, and make sure you have granted diagrams.net the <a href="/doc/faq/gsuite-permissions.html">permissions needed to work with diagrams in G Suite</a>.</p>
 
-<p>You you have authorised diagrams.net to access files on your personal Google account</p>
+<p>When you can work with diagrams stored in your personal Google Drive but not in a Google G Suite account, your administrator may not have allowed third-party apps on your company’s G Suite domain.</p>
 
-<p>If authorization is working for your personal Google account, but not on a Google GSuite account, it’s possible the administrator hasn’t enabled third-party Drives apps for the GSuite domain.
-Under admin.google.com, go to Google Apps -&gt; Drive -&gt; General Settings. On the right hand side there is a tick box “Allow users to install Google Drive apps”. That needs to be enabled and save changes. After a short while user will be able to install draw.io individually.
-If the domain admin doesn’t wish to enable this, they can install draw.io Pro on the entire domain’s behalf. Again, on the admin console, go to “Marketplace Apps” and click on “Add Marketplace Apps” (towards the top right). That will list all domain installable apps. We’re generally in the first page, if not, search for “draw.io”. Click on our listing and there will be directions to install for the whole domain.</p>
+<h2 id="authorise-third-party-apps-in-g-suite">Authorise third party apps in G Suite</h2>
+
+<ol>
+  <li>As an administrator, go to <a href="https://admin.google.com">admin.google.com</a>, then navigate to <em>Google Apps &gt; Drive &gt; General Settings</em>.</li>
+  <li>On the right, enable the check box <em>Allow users to install Google Drive apps</em> then save your changes. It may take a short time for the system to update, after which your users will be able to install the diagrams.net add-ons in G Suite apps themselves.</li>
+</ol>
+
+<p>If you don’t want to enable this setting and allow your users to individually install the add-ons, <a href="/doc/faq/gsuite-addons-domain-wide.html">install diagrams.net domain wide</a>.</p>
 
 
     </div>
