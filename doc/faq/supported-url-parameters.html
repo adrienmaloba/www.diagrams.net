@@ -508,21 +508,23 @@
 <h2 id="settings">Settings</h2>
 
 <ul>
-  <li><code class="highlighter-rouge">open=prefix+ID</code>: If location hash properties are not available, use this as a replacement. The browser will add the hash property to the URL immediately and not remove the URL parameter. Existing hash property takes precedence.</li>
-  <li><code class="highlighter-rouge">lang=xy</code>: Specifies the language of the user interface. Possible values for <code class="highlighter-rouge">xy</code> include <em>i18n</em>, id: Bahasa Indonesia, ms: Bahasa Melayu, bs: Bosanski, ca: Català, cs: Čeština, da: Dansk, de: Deutsch, et: Eesti, en: English, es: Español, fil: Filipino, fr: Français, it: Italiano, hu: Magyar, nl: Nederlands, no: Norsk, pl: Polski, pt-br: Português (Brasil), pt: Português (Portugal), ro: Română, fi: Suomi, sv: Svenska, vi: Tiếng Việt, tr: Türkçe, el: Ελληνικά, ru: Русский, sr: Српски, uk: Українська, he: עברית, ar: العربية, th: ไทย, ko: 한국어, ja: 日本語, zh: 中文（中国）, zh-tw: 中文（台灣）</li>
+  <li><code class="highlighter-rouge">open=prefix+ID</code>: If <a href="/doc/faq/supported-location-hash-properties.html">location hash properties</a> are not available, use this as a replacement. The browser will add the hash property to the URL immediately and not remove the URL parameter. Existing hash property takes precedence.</li>
+  <li><code class="highlighter-rouge">lang=xy</code>: Specifies the language of the user interface. Possible values for <code class="highlighter-rouge">xy</code> include <em>i18n</em>, <code class="highlighter-rouge">id</code>: Bahasa Indonesia, ms: Bahasa Melayu, <code class="highlighter-rouge">bs</code>: Bosanski, <code class="highlighter-rouge">ca</code>: Català, <code class="highlighter-rouge">cs</code>: Čeština, <code class="highlighter-rouge">da</code>: Dansk, <code class="highlighter-rouge">de</code>: Deutsch, <code class="highlighter-rouge">et</code>: Eesti, <code class="highlighter-rouge">en</code>: English, <code class="highlighter-rouge">es</code>: Español, <code class="highlighter-rouge">fil</code>: Filipino, <code class="highlighter-rouge">fr</code>: Français, <code class="highlighter-rouge">it</code>: Italiano, <code class="highlighter-rouge">hu</code>: Magyar, <code class="highlighter-rouge">nl</code>: Nederlands, <code class="highlighter-rouge">no</code>: Norsk, <code class="highlighter-rouge">pl</code>: Polski, <code class="highlighter-rouge">pt-br</code>: Português (Brasil), <code class="highlighter-rouge">pt</code>: Português (Portugal), <code class="highlighter-rouge">ro</code>: Română, <code class="highlighter-rouge">fi</code>: Suomi, <code class="highlighter-rouge">sv</code>: Svenska, <code class="highlighter-rouge">vi</code>: Tiếng Việt, <code class="highlighter-rouge">tr</code>: Türkçe, <code class="highlighter-rouge">el</code>: Ελληνικά, <code class="highlighter-rouge">ru</code>: Русский, <code class="highlighter-rouge">sr</code>: Српски, <code class="highlighter-rouge">uk</code>: Українська, <code class="highlighter-rouge">he</code>: עברית, <code class="highlighter-rouge">ar</code>: العربية, <code class="highlighter-rouge">th</code>: ไทย, <code class="highlighter-rouge">ko</code>: 한국어, <code class="highlighter-rouge">ja</code>: 日本語, <code class="highlighter-rouge">zh</code>: 中文（中国）, <code class="highlighter-rouge">zh-tw</code>: 中文（台灣）</li>
   <li><code class="highlighter-rouge">libs=key1;key2;...;keyN</code>: Specifies the current libraries. Possible keys are allied_telesis, android, archimate, archimate3, arrows2, atlassian, aws3, aws3d, aws4, azure, basic, bootstrap, bpmn, cabinets, cisco, cisco_safe, citrix, clipart, dfd, eip, electrical, er, floorplan, flowchart, gcp2, general, gmdl, ibm, images, infographic, ios, lean_mapping, mockups, mscae, network, office, pid, rack, signs, sitemap, sysml, uml, veeam and webicons.</li>
   <li><code class="highlighter-rouge">clibs=key1;key2;key;...;keyN</code>: Specifies custom libraries (keys are file IDs or <a href="https://app.diagrams.net/?splash=0&amp;clibs=Uhttps%3A%2F%2Fjgraph.github.io%2Fdrawio-libs%2Flibs%2Ftemplates.xml">URLs with a U-prefix</a>)</li>
-  <li><code class="highlighter-rouge">page=index</code>: Starts with the given page (the default is first page, index for first page is <code class="highlighter-rouge">0</code>)</li>
+  <li><code class="highlighter-rouge">viewbox={"x": int, "y": int, "width": int, "height": int}</code>: Sets the initial viewport when you specify file IDs.</li>
+  <li><code class="highlighter-rouge">page=index</code>: Starts with the given page (the default is the first page, where the index for the first page is <code class="highlighter-rouge">0</code>)</li>
   <li><code class="highlighter-rouge">page-id=ID</code>: Starts with the given page ID (has precedence over the <code class="highlighter-rouge">page</code> URL parameter). To find the ID of the current page, right click on the canvas and select <em>Edit Data</em>. The ID is the first entry in this dialog.</li>
+  <li><code class="highlighter-rouge">hide-pages=1</code>: Hides the controls that allow you to change the current page in lightbox mode.</li>
   <li><code class="highlighter-rouge">ui=[min|atlas|dark]</code>: Uses the Minimal, Atlas or Dark UI theme (default is Kennedy).</li>
   <li><code class="highlighter-rouge">drafts=0</code>: Disables draft states (does not save unsaved files in <em>IndexedDB</em>).</li>
   <li><code class="highlighter-rouge">splash=0</code>: Does not show the splash screen.</li>
   <li><code class="highlighter-rouge">plugins=0</code>: Does not load <a href="/doc/faq/plugins.html">plugins</a>.</li>
   <li><code class="highlighter-rouge">format=0</code>: Disables the format panel on the right.</li>
-  <li><code class="highlighter-rouge">picker=0/1</code>: Disables/enables the Google filepicker in dialogs.</li>
-  <li><code class="highlighter-rouge">thumb=0</code>: Disables the creation of thumbnails in Drive</li>
+  <li><code class="highlighter-rouge">picker=0/1</code>: Disables/enables the Google file picker in dialogs.</li>
+  <li><code class="highlighter-rouge">thumb=0</code>: Disables the creation of thumbnails in Drive.</li>
   <li><code class="highlighter-rouge">chrome=0</code>: Uses the chromeless read-only viewer.</li>
-  <li><code class="highlighter-rouge">target=[auto|self|frame|blank]</code>: Opens links in the same window or frame or in a blank window in chromeless mode (<code class="highlighter-rouge">auto</code> is the default which opens relative links and anchors in same window in chromeless mode, and all links in a new window in editing mode).</li>
+  <li><code class="highlighter-rouge">target=[auto|self|frame|blank]</code>: Opens links in the same window or frame or in a blank window in chromeless mode (<code class="highlighter-rouge">auto</code> is the default which opens relative links and anchors in the same window in chromeless mode, and all links in a new window in editing mode).</li>
   <li><code class="highlighter-rouge">highlight=hex</code>: Specifies the highlight colour (with no leading <code class="highlighter-rouge">#</code>) for links in chromeless mode.</li>
   <li><code class="highlighter-rouge">edge=move</code>:  Disables the handling of connector segments without having previously selected the connector.</li>
   <li><code class="highlighter-rouge">rt=1</code>: Uses chromeless mode with Google Drive realtime enabled.</li>
@@ -536,18 +538,18 @@
   <li><code class="highlighter-rouge">pv=0</code>: Sets the default <code class="highlighter-rouge">pageVisible</code> to <code class="highlighter-rouge">false</code>.</li>
   <li><code class="highlighter-rouge">sb=0</code>: Starts with scrollbars disabled.</li>
   <li><code class="highlighter-rouge">ruler=1</code>: Starts with the ruler enabled.</li>
-  <li><code class="highlighter-rouge">toolbar=0</code>: Disables the toolbar in chromeless mode</li>
-  <li><code class="highlighter-rouge">border=60</code>: Sets the border used in lightbox mode (default is <code class="highlighter-rouge">60</code>).</li>
+  <li><code class="highlighter-rouge">toolbar=0</code>: Disables the toolbar in chromeless mode.</li>
+  <li><code class="highlighter-rouge">border=60</code>: Sets the border width used in lightbox mode (the default is <code class="highlighter-rouge">60</code>).</li>
   <li><code class="highlighter-rouge">p=id1;id2;...;idN</code>: Selects which plugins to load. <a href="/doc/faq/plugins.html">See the list of available plugins</a>.</li>
-  <li><code class="highlighter-rouge">cors=regex</code>: Checks whether URLS have CORS enabled using a URL encoded regular expression, e.g. <code class="highlighter-rouge">cors=%5Ehttps%3F%3A%5C%2F%5C%2F.*%5C.github%5C.io%5C%2F</code></li>
   <li><code class="highlighter-rouge">base=url</code>: Sets the base URL to use for links (use this if <code class="highlighter-rouge">document.referrer</code> is not available in embed mode).</li>
-  <li><code class="highlighter-rouge">gitlab=url</code>: Sets the URL encoded path to a custom Gitlab installation to use for Gitlab file operations.</li>
-  <li><code class="highlighter-rouge">gitlab-id=ID</code>: Specifies the <a href="https://github.com/jgraph/drawio/issues/493#issuecomment-518558510">client ID of the custom Gitlab application</a> when using custom Gitlab instance.</li>
-  <li><code class="highlighter-rouge">vars=json</code>: Uses a URI encoded JSON string for global placeholders for use in labels and tooltips where enabled, e.g. <code class="highlighter-rouge">vars={"key":"value"}</code>.</li>
+  <li><code class="highlighter-rouge">gitlab=url</code>: Sets the URL-encoded path to a custom GitLab installation to use for GitLab file operations.</li>
+  <li><code class="highlighter-rouge">gitlab-id=ID</code>: Specifies the <a href="https://github.com/jgraph/drawio/issues/493#issuecomment-518558510">client ID of the custom GitLab application</a> when using a custom GitLab instance.</li>
+  <li><code class="highlighter-rouge">vars=json</code>: Uses a URI-encoded JSON string for global <a href="/blog/placeholders.html">placeholders for use in labels and tooltips</a> where enabled, e.g. <code class="highlighter-rouge">vars={"key":"value"}</code>.</li>
   <li><code class="highlighter-rouge">zoom=nocss</code>: Disables the CSS zoom preview.</li>
   <li><code class="highlighter-rouge">override-mime=1</code>: Saves all Google Drive files as <code class="highlighter-rouge">application/vnd.jgraph.mxfile</code>.</li>
-  <li><code class="highlighter-rouge">template-filename=name</code>: If #U hash property is used but the URL does not contain a filename to determine binary mode. See https://desk.draw.io/support/solutions/articles/16000080686</li>
-  <li><code class="highlighter-rouge">math-font</code>: Sets the font to use for math typesetting. Possible values are <code class="highlighter-rouge">STIX-Web</code> and <code class="highlighter-rouge">TeX</code> (default).</li>
+  <li><code class="highlighter-rouge">template-filename=name</code>: If the #U hash property is used but the URL does not contain a filename to determine binary mode. See the list of <a href="/doc/faq/supported-location-hash-properties.html">supported location hash properties</a>.</li>
+  <li><code class="highlighter-rouge">math-font</code>: Sets the font to use for math typesetting. Possible values are <code class="highlighter-rouge">STIX-Web</code> (SVG) or STIX (HTML-CSS).</li>
+  <li><code class="highlighter-rouge">math-output=html</code>: Sets the math typesetting output to <code class="highlighter-rouge">HTML-CSS</code>.</li>
 </ul>
 
 <h2 id="modes">Modes</h2>
@@ -562,22 +564,24 @@
   <li><code class="highlighter-rouge">db=0</code>: Disables the Dropbox integration.</li>
   <li><code class="highlighter-rouge">od=0</code>: Disables the OneDrive integration.</li>
   <li><code class="highlighter-rouge">tr=0</code>: Disables the Trello integration.</li>
-  <li><code class="highlighter-rouge">gh=0</code>: Disables the GitHub integration.</li>
+  <li><code class="highlighter-rouge">gh=0</code>: Disables the Github integration.</li>
   <li><code class="highlighter-rouge">gl=0</code>: Disables the GitLab integration.</li>
-  <li><code class="highlighter-rouge">drive=0</code>: Simulates app.diagrams.net regardless of the domain name (uses the old app ID).</li>
+  <li><code class="highlighter-rouge">drive=0</code>: Simulates <a href="https://app.diagrams.net">app.diagrams.net</a> regardless of the domain name (uses the old app ID).</li>
   <li><code class="highlighter-rouge">mode=[google|onedrive|github|dropobox|device|browser]</code>: Switches to the specified mode.</li>
   <li><code class="highlighter-rouge">offline=[1|0]</code>: Registers or unregisters the progressive web app (all remote storage locations are disabled).</li>
+  <li><code class="highlighter-rouge">pwa=0</code>: Disables the ability to (un)register the progressive web app (when installed it will stay installed).</li>
   <li><code class="highlighter-rouge">stealth=1</code>: Disables all features that require external web services (such as <a href="/blog/export-pdf.html">PDF export</a>).</li>
   <li><code class="highlighter-rouge">demo=1</code>: Shortcut for <code class="highlighter-rouge">db=0&amp;gapi=0&amp;math=0&amp;picker=0</code>, disables the splash screen and creates an empty, local diagram file.</li>
-  <li><code class="highlighter-rouge">url=url</code>: <em>Deprecated</em> - please use <code class="highlighter-rouge">#Uencoded_url</code> instead (opens a diagram from a URI encoded URL where the URL should be encoded).</li>
+  <li><code class="highlighter-rouge">url=url</code>: <em>Deprecated</em> - please use <code class="highlighter-rouge">#Uencoded_url</code> instead (opens a diagram from a URI-encoded URL, where the URL should be encoded).</li>
   <li><code class="highlighter-rouge">data=data</code>: Gets the XML data for the diagram (used in client mode to bypass message passing and cross frame access).</li>
   <li><code class="highlighter-rouge">client=1</code>: Runs diagrams.net in client mode. This displays a normal UI and sends a <code class="highlighter-rouge">ready</code> message to the opener or parent when the page is loaded. After receiving a message containing XML or compressed XML, a local file is created. The file is then set to <code class="highlighter-rouge">modified</code> so the connection to the window can be closed after sending the initial XML. Whether the XML is loaded again after a page refresh, depends on the caller implementation. Use <code class="highlighter-rouge">proto=json</code> to use a custom protocol for special cases.</li>
-  <li><code class="highlighter-rouge">embed=1:</code> Runs diagrams.net in <a href="/doc/faq/embed-mode.html">embed mode</a>.</li>
-  <li><code class="highlighter-rouge">configure=1</code>: Sends the <code class="highlighter-rouge">configure</code> event and waits for the <code class="highlighter-rouge">configure</code> action. <a href="/doc/faq/embed-mode.html">See embed mode</a>.</li>
+  <li><code class="highlighter-rouge">desc={compressed-json}</code>: Passes the CSV import descriptor (<a href="https://www.draw.io/?desc=SnVTtjpswEHwafl50gUP5nZC7F7i+gIMdvI3xIrMkSp++u7bh0tKoVSUE9sx6PPuRFLtDUZZTcPwuqj2/LdEwxuUHP9+7oAa76YDsdNoAMqSDugG+aFDM9aMgX0sMXWtVoE07XkWybPh9xtArWm54pLQitRBFWTl1Mi7uXouy9qo3/Cmq5hSK6p2/wMRId2eK6ljUotCiQyb37OBeVIcESnBZDzgCAfokwe4gicxifPOrDea8aPUKHGG8vjaykZOz4HsEoo6S83XDwlU2I4az9wP0qov+yjot5frDzQKZz0G1Qt24qoxZ6vnAccvLgJPXRufdGZxrUmIiI9ukMlLAi3mgEpDIbAm08QR0T65eMiq1HNP1AnMToB8w0My36L1pKdd+lwt5DtjPFYhErpPnvEImpJGZ4OKtgmMTV5HgrybQYzSFyTxGpHI+uXv8XTE+kkecnCdPPJM6ttJtp3Bd6m+83oeAN96eHLaXbxZ8gj+kFblJ6OkTfkg/t9uv0dsd/6OiPIWrlP5cTtDruH9J6W9unTnTclgAwuGX/Q002YSoKToT1BroLK3gQWkNvssjuC3n0ew8hjyBnEjZ5B9Ikya8ydOcHYG/pFD5f8pTjDpO8aL9NtszunvCOHXH6dFiTPsn">example</a>). Works with the <a href="https://www.draw.io/">www.draw.io</a> domain only.</li>
+  <li><code class="highlighter-rouge">embed=1:</code> Runs diagrams.net in <a href="/doc/faq/embed-mode.html">embed mode</a>. Use this mode with <a href="https://embed.diagrams.net">embed.diagrams.net</a> only.</li>
+  <li><code class="highlighter-rouge">configure=1</code>: Sends the <code class="highlighter-rouge">configure</code> event and waits for the <code class="highlighter-rouge">configure</code> action. See more about the <a href="/doc/faq/embed-mode.html">embed mode</a>.</li>
   <li><code class="highlighter-rouge">create=url/name</code>: Creates a new file from a template URL. If the value is not a URL and is not empty, the script will try to use <code class="highlighter-rouge">window.opener[url]</code>. In <a href="/doc/faq/embed-mode.html">embed mode</a>, <code class="highlighter-rouge">window.opener[name]</code> will be used to get the initial XML. Note that this requires the same origin policy in the opener/parent for reading the variable.</li>
   <li><code class="highlighter-rouge">title=title</code>: Sets a new file title (used with the <code class="highlighter-rouge">create</code> and <code class="highlighter-rouge">url</code> parameters).</li>
   <li><code class="highlighter-rouge">notitle=1</code>: Uses the default filename for new files (used with the <code class="highlighter-rouge">url</code> parameter)</li>
-  <li><code class="highlighter-rouge">nowarn=1</code>: Suppresses the warning before unload for local files.</li>
+  <li><code class="highlighter-rouge">nowarn=1</code>: Suppresses the warning before an unload for local files.</li>
 </ul>
 
 <h2 id="additional-resources">Additional resources</h2>
