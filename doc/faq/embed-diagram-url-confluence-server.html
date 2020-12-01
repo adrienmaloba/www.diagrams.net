@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Why text in exported SVG images may not display correctly</title>
+  <title>Embed a diagram from a URL into a Confluence Data Center and Server page</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -490,7 +490,7 @@
                 
               
                 
-                    <li class="breadcrumb-item"><a class="current">Why text in exported SVG images may not display correctly</a></li>
+                    <li class="breadcrumb-item"><a class="current">Embed a diagram from a URL into a Confluence Data Center and Server page</a></li>
                 
               
           </ol>
@@ -501,31 +501,27 @@
 
     <div class="w-lg-60 mx-lg-auto">
       <div class="mb-4">
-        <h1 class="h2 font-weight-medium">Why text in exported SVG images may not display correctly</h1>
+        <h1 class="h2 font-weight-medium">Embed a diagram from a URL into a Confluence Data Center and Server page</h1>
       </div>
 
-      <p>When you look at a diagram exported to an SVG image in IE or some SVG editors, the text may not display correctly.</p>
-
-<p>diagrams.net uses something called foreign objects in SVG to allow complex, HTML labels on shapes.</p>
-
-<p>All modern browsers including Chrome, Firefox, Safari and Microsoft Edge support this functionality. Internet Explorer 11 and earlier versions of IE do not.</p>
-
-<p>We can account for this dynamically if you use diagrams.net in IE11 or earlier. However, the exported SVG will not show all labels when the SVG image file is viewed in IE and most SVG editors (such as Inkscape and Illustrator), as well as some online services such as Wordpress. Instead, you will see a short version of the label and a warning <code class="highlighter-rouge">Viewer does not support full SVG 1.1</code> at the bottom of the SVG export. This warning can be suppressed by using the <a href="/doc/faq/supported-url-parameters">svg-warning=0 URL parameter</a>.</p>
-
-<p>We are aware of the problem and have spent a considerable amount of time researching solutions. However, the subject is very complex and we don’t have a fix so far. We will continue to investigate it.</p>
-
-<p>In the meantime, consider <a href="doc/faq/pdf-print-to.html">exporting your diagram to a PDF file</a> as this is also a vector format, or disable formatted text and word wrapping for all labels in your diagram before you export it to SVG by following the steps below.</p>
+      <p>Use the <em>Embed draw.io diagram</em> macro to add a diagram from a publicly accessible location on the internet to a page in your Confluence Data Center or Server instance.</p>
 
 <ol>
-  <li>Right click on a blank area of the drawing canvas, then choose <em>Select All</em> from the context menu.</li>
-  <li>In the <em>Text</em> tab of the format panel, uncheck the <em>Formatted Text</em> option.</li>
-  <li>Right click on a blank area of the drawing canvas, then choose <em>Select Vertices</em>.</li>
-  <li>In the <em>Text</em> tab of the format panel, uncheck the <em>Word Wrap</em> option.</li>
+  <li>Edit the Confluence page on which you want to embed your diagram, then type <code class="highlighter-rouge">/draw</code> to insert a macro. Select <em>Embed draw.io diagram</em>.
+<br /><img src="/assets/img/blog/embed-drawio-diagram-macro-confluence-server.png" style="width=100%;max-width:200px;height:auto;" alt="Add the Embed draw.io Diagram macro to your Confluence page" /></li>
+  <li>Select the <em>From URL</em> tab in the <em>Embed draw.io Diagram</em> dialog.</li>
+  <li>Enter a <em>Diagram Name</em> and the <em>Diagram URL</em> in the textboxes, and click <em>Show diagram</em> to see a preview. In the example below, the diagram is stored in our public Github repository.</li>
+  <li>Click <em>Insert</em> to embed the diagram into your Confluence page.
+<br /><img src="/assets/img/blog/embed-drawio-diagram-fromurl-confluence-server.png" style="max-width:100%;height:auto;" alt="Add a diagram name, its public URL, then insert it into your Confluence page" /></li>
 </ol>
 
-<p><strong>Note:</strong> When you disable these formatting options, you can still style the label text as a whole. You can not apply different formatting to parts of the label.</p>
+<p>The <em>Embed draw.io diagram</em> macro will show a preview of the embedded diagram while you are still editing the Confluence page. You can now change the macro settings to display the diagram at a different size.</p>
 
-<p><img src="/assets/img/blog/svg-export-remove-text-formatting.gif" style="max-width:100%;height:auto;" alt="Disable the Formatted Text and Word Wrap options before exporting to SVG to view it correctly in IE and SVG editors" /></p>
+<p>Save the page to see the embedded diagram in view mode.</p>
+
+<p><img src="/assets/img/blog/embed-diagrams-confluence-server.png" style="max-width:100%;height:auto;" alt="Embedded diagrams in draw.io for Confluence Data Center and Server" /></p>
+
+<p><strong>Tip:</strong> You can embed draw.io diagrams stored in <a href="/doc/faq/embed-diagram-googledrive-confluence-server.html">Google Drive</a>, <a href="/doc/faq/embed-diagram-onedrive-confluence-server.html">Microsoft OneDrive</a>, <a href="/doc/faq/embed-diagram-confluence-server.html">from a different Confluence page</a>, or a <a href="/doc/faq/embed-diagram-csv-confluence-server.html">text file with CSV data stored on the internet</a>.</p>
 
 
     </div>

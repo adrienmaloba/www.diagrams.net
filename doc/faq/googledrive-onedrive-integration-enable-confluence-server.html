@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Why text in exported SVG images may not display correctly</title>
+  <title>Enable Google Drive and OneDrive integration in Confluence Data Center and Server</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -490,7 +490,7 @@
                 
               
                 
-                    <li class="breadcrumb-item"><a class="current">Why text in exported SVG images may not display correctly</a></li>
+                    <li class="breadcrumb-item"><a class="current">Enable Google Drive and OneDrive integration in Confluence Data Center and Server</a></li>
                 
               
           </ol>
@@ -501,31 +501,19 @@
 
     <div class="w-lg-60 mx-lg-auto">
       <div class="mb-4">
-        <h1 class="h2 font-weight-medium">Why text in exported SVG images may not display correctly</h1>
+        <h1 class="h2 font-weight-medium">Enable Google Drive and OneDrive integration in Confluence Data Center and Server</h1>
       </div>
 
-      <p>When you look at a diagram exported to an SVG image in IE or some SVG editors, the text may not display correctly.</p>
-
-<p>diagrams.net uses something called foreign objects in SVG to allow complex, HTML labels on shapes.</p>
-
-<p>All modern browsers including Chrome, Firefox, Safari and Microsoft Edge support this functionality. Internet Explorer 11 and earlier versions of IE do not.</p>
-
-<p>We can account for this dynamically if you use diagrams.net in IE11 or earlier. However, the exported SVG will not show all labels when the SVG image file is viewed in IE and most SVG editors (such as Inkscape and Illustrator), as well as some online services such as Wordpress. Instead, you will see a short version of the label and a warning <code class="highlighter-rouge">Viewer does not support full SVG 1.1</code> at the bottom of the SVG export. This warning can be suppressed by using the <a href="/doc/faq/supported-url-parameters">svg-warning=0 URL parameter</a>.</p>
-
-<p>We are aware of the problem and have spent a considerable amount of time researching solutions. However, the subject is very complex and we don’t have a fix so far. We will continue to investigate it.</p>
-
-<p>In the meantime, consider <a href="doc/faq/pdf-print-to.html">exporting your diagram to a PDF file</a> as this is also a vector format, or disable formatted text and word wrapping for all labels in your diagram before you export it to SVG by following the steps below.</p>
+      <p>The draw.io app for Confluence Data Center and Server allows you to embed diagrams you have stored in Google Drive and One Drive. This option is disabled by default, and needs to be enabled in the draw.io app configuration by a Confluence administrator.</p>
 
 <ol>
-  <li>Right click on a blank area of the drawing canvas, then choose <em>Select All</em> from the context menu.</li>
-  <li>In the <em>Text</em> tab of the format panel, uncheck the <em>Formatted Text</em> option.</li>
-  <li>Right click on a blank area of the drawing canvas, then choose <em>Select Vertices</em>.</li>
-  <li>In the <em>Text</em> tab of the format panel, uncheck the <em>Word Wrap</em> option.</li>
+  <li>As an administrator, go to the Confluence Administration, then select <em>Configuration</em> under the <em>draw.io add-on</em> section.</li>
+  <li>Select the <em>Google Drive/OneDrive Integration</em> tab.</li>
+  <li>Select <em>Simple integration</em> if you draw.io to communicate directly with the cloud platforms. Alternatively, if you have created an app within Google Drive/One Drive and want all communication with the cloud platforms to go via your own servers, select <em>Full integration</em>.</li>
+  <li>Click <em>Save changes</em>.</li>
 </ol>
 
-<p><strong>Note:</strong> When you disable these formatting options, you can still style the label text as a whole. You can not apply different formatting to parts of the label.</p>
-
-<p><img src="/assets/img/blog/svg-export-remove-text-formatting.gif" style="max-width:100%;height:auto;" alt="Disable the Formatted Text and Word Wrap options before exporting to SVG to view it correctly in IE and SVG editors" /></p>
+<p><br /><img src="/assets/img/blog/googledrive-onedrive-integration-enable-confluence-server.png" style="max-width:100%;height:auto;" alt="As an administrator, enable the draw.io Google Drive/One Drive integration in Confluence Data Center and Server" /></p>
 
 
     </div>
