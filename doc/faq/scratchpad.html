@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Embed mode</title>
+  <title>Use the scratchpad in diagrams.net</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -490,7 +490,7 @@
                 
               
                 
-                    <li class="breadcrumb-item"><a class="current">Embed mode</a></li>
+                    <li class="breadcrumb-item"><a class="current">Use the scratchpad in diagrams.net</a></li>
                 
               
           </ol>
@@ -501,75 +501,68 @@
 
     <div class="w-lg-60 mx-lg-auto">
       <div class="mb-4">
-        <h1 class="h2 font-weight-medium">Embed mode</h1>
+        <h1 class="h2 font-weight-medium">Use the scratchpad in diagrams.net</h1>
       </div>
 
-      <p>If the <code class="highlighter-rouge">embed=1</code> URL parameter is used, the client runs in embed mode and the page will send a “ready” message to the opener or parent when the page is loaded. This mode is only supported on <a href="https://embed.diagrams.net">https://embed.diagrams.net</a>. After receiving the ready message, the diagram data can be sent as XML or compressed XML. It will return XML or an empty string if <em>Apply</em> or <em>Cancel</em> are selected, respectively. The following URL parameters are available in embed mode:</p>
-<ul>
-  <li><code class="highlighter-rouge">spin=1</code>: Shows a <em>Loading…</em> spinner while waiting for the diagram data to load in embed mode.</li>
-  <li><code class="highlighter-rouge">modified=0</code>: Disables the update of the modified state in embed mode after <em>Save</em> is selected and enables the update of the status message after changes are made. If <code class="highlighter-rouge">0</code> is used, the status bar is cleared after the changes. Otherwise, the value of this is used as the resource key. Instead of using this <a href="/doc/faq/supported-url-parameters.html">URL parameter</a>, you can specify this setting in the load message.</li>
-  <li><code class="highlighter-rouge">keepmodified=1</code>: If <code class="highlighter-rouge">modified</code> specifies a resource key, this is used to maintain the modified state after <em>Save</em> is selected.</li>
-  <li><code class="highlighter-rouge">libraries=1</code>: Specifies whether libraries should be enabled in embed mode. The default is disabled (<code class="highlighter-rouge">0</code>).</li>
-  <li><code class="highlighter-rouge">noSaveBtn=1</code>: Displays a <em>Save and Exit</em> button instead of a <em>Save</em> button. Instead of using this URL parameter, you can specify this setting in the load message. If this is used, then the <code class="highlighter-rouge">saveAndExit</code> URL parameter is ignored.</li>
-  <li><code class="highlighter-rouge">saveAndExit=1</code>: Displays an additional <em>Save and Exit</em> button. Instead of using this URL parameter, you can specify this setting in the load message.  If <code class="highlighter-rouge">noSaveBtn=1</code> is used, this can be disabled with <code class="highlighter-rouge">saveAndExit=0</code>.</li>
-  <li><code class="highlighter-rouge">noExitBtn=1</code>: Hides the <code class="highlighter-rouge">Exit</code> button. Instead of using this URL parameter, you can specify this setting in the load message.
-<br /><strong>Note:</strong> To hide all buttons in embed mode, use <code class="highlighter-rouge">saveAndExit=0&amp;noSaveBtn=1&amp;noExitBtn=1</code>.</li>
-  <li><code class="highlighter-rouge">ready=message</code>: Specifies the message to send in embed or client mode. Default is <code class="highlighter-rouge">'ready'</code>. If the JSON protocol is used, then this is ignored.</li>
-  <li><code class="highlighter-rouge">returnbounds=1</code>: Returns a JSON structure with the diagram bounds in embed and client mode. This message is dispatched immediately after receiving the diagram XML.</li>
-  <li><code class="highlighter-rouge">proto=json</code>: Uses JSON for message passing in embed and client mode.</li>
-  <li><code class="highlighter-rouge">configure=1</code>: Sends the <code class="highlighter-rouge">configure</code> event and waits for the <code class="highlighter-rouge">configure</code> action.</li>
-</ul>
+      <p>The scratchpad is your personal shape library where you can add the styled shapes or groups of shapes that you use the most often. You can drag a shape/group of shapes from the drawing canvas onto your scratchpad, and then drag new copies from the scratchpad back onto the drawing canvas whenever you need them.</p>
 
-<h2 id="configuration">Configuration</h2>
+<p><strong>Display the scratchpad</strong></p>
 
-<p>If the <code class="highlighter-rouge">configure=1</code> URL parameter is used, the client sends <code class="highlighter-rouge">{event: 'configure'}</code> and waits for <code class="highlighter-rouge">{action: 'configure', config: obj}</code> before creating the main application and sending the <code class="highlighter-rouge">init</code> event. The <code class="highlighter-rouge">obj</code> is <a href="/doc/faq/diagram-editor-configuration.html">specified in the configuration</a>, e.g. <code class="highlighter-rouge">config: {defaultFonts: ["Humor Sans"]}</code>.</p>
-
-<h2 id="description-of-the-json-protocol">Description of the JSON protocol</h2>
-
-<p>When the client is ready, it sends <code class="highlighter-rouge">{event: 'init'}</code> and expects <code class="highlighter-rouge">{action: 'load', xml: '...'}</code>. Specify an optional <code class="highlighter-rouge">autosave: 1</code> in this message to enable the autosave feature.</p>
-
-<p>You can set the optional <code class="highlighter-rouge">modified</code> flag using the same semantic as the <code class="highlighter-rouge">modified</code> URL parameter which is defined above. The optional <code class="highlighter-rouge">saveAndExit</code> flag can be specified with the same semantic as the <code class="highlighter-rouge">saveAndExit</code> URL parameter which is defined above. The URL parameters have precedence over the flags set in this way.</p>
-
-<p>Specify the optional <code class="highlighter-rouge">title</code> string to show a title in the menu bar (on the right).</p>
-
-<p>If <code class="highlighter-rouge">autosave</code> is enabled, the editor will send the current XML in an <code class="highlighter-rouge">{event: 'autosave'...}</code>.</p>
-
-<p>The XML in the load message is displayed and an <code class="highlighter-rouge">{event: 'load'...}</code> is returned with some data about the size of the diagram. The XML in this message can be any supported XML representation of the diagram including SVG or <a href="/blog/xml-in-png.html">PNG files with embedded XML</a>. The old parameter name to pass PNG+XML <code class="highlighter-rouge">xmlpng</code> can still be used.</p>
-
-<p>Alternatively, you can add a descriptor object to the load message that imports specific data formats, e.g. <code class="highlighter-rouge">{action: 'load', descriptor: {format: 'csv', data: ...}}</code> where <code class="highlighter-rouge">data</code> is the string from the CSV import dialog.</p>
-
-<p><strong>Note:</strong> For XML, all supported file formats can be used, including PNG+XML, the data part of an SVG data URI with UTF8 encoding, or the complete SVG or PNG data URI with base64 encoding. For all <code class="highlighter-rouge">.vsd*</code> files, a data URI with a
-<code class="highlighter-rouge">data:application/vnd.visio;base64</code> prefix must be used. Lucidchart and Gliffy files are represented as a JSON string.</p>
-
-<p>When you select <em>Save</em>, the same message as the <code class="highlighter-rouge">load</code> event is sent, but with an additional event: <code class="highlighter-rouge">'save'</code> and <code class="highlighter-rouge">xml: '...'</code> containing the XML of the diagram. When you select <em>Save and Exit</em>, the message includes an additional <code class="highlighter-rouge">exit: true</code>. If you select <em>Exit</em> , an <code class="highlighter-rouge">{event: 'exit', modified: boolean}</code> is sent. When you click on a link in the editor interface, the app tries to open the link with the given target (default is <code class="highlighter-rouge">_blank</code>) and sends an <code class="highlighter-rouge">{event: 'openLink', href: String, target: String}</code> event.</p>
+<p>The scratchpad is usually found at the top of the left panel, above the shape libraries and below the <em>Search Shapes</em> field.</p>
 
 <ul>
-  <li><code class="highlighter-rouge">{action: 'merge', xml: '...'}</code> can be sent at any time to merge the contents of the given XML into the current file, an <code class="highlighter-rouge">{event: 'merge', error: '...', message: ...}</code> with the incoming message and an optional error is returned. If the merge was successful, then the error is null.</li>
-  <li><code class="highlighter-rouge">{action: 'dialog', title: '...', message: '...', button: '...', modified: bool}</code> can be sent at any time to display a dialog in the editor window. To translate the dialog, use <code class="highlighter-rouge">titleKey</code>, <code class="highlighter-rouge">messageKey</code> and <code class="highlighter-rouge">buttonKey</code> instead.</li>
-  <li><code class="highlighter-rouge">{action: 'prompt', title: '...', ok: '...', defaultValue: '...'}</code> can be sent at any time to display a prompt in the editor window. To translate the title, use <code class="highlighter-rouge">titleKey</code> and <code class="highlighter-rouge">okKey</code> instead. When <em>OK</em> is selected, an <code class="highlighter-rouge">{event: 'prompt', value: '...', message: ...}</code> with the incoming message is returned.</li>
-  <li><code class="highlighter-rouge">{action: 'template'}</code> can be sent at any time to show the template dialog. This is normally sent instead of a <code class="highlighter-rouge">load</code> message to create an initial diagram. When <em>Create</em> is selected, the diagram is created from the selected template. If <em>Cancel</em> is selected, an <code class="highlighter-rouge">exit</code> message is sent. Specify an optional <code class="highlighter-rouge">callback: true</code> parameter to pass the current template and filename back to the caller for validation. The message for the callback is <code class="highlighter-rouge">{event: 'template', xml: '...', blank: '...', name: ..., message: ...}</code> where <code class="highlighter-rouge">blank</code> is <code class="highlighter-rouge">true</code> if a blank diagram was selected in the template dialog and message is the incoming message.</li>
-  <li><code class="highlighter-rouge">{action: 'layout', layouts: ...}</code> runs an array of layouts using the same format as <em>Arrange &gt; Layout &gt; Apply</em>.</li>
-  <li><code class="highlighter-rouge">{action: 'draft', xml: '...', name: '...', editKey: '...', discardKey: '...', ignore: bool}</code> can be sent to show a draft dialog. If <em>Edit</em> or <em>Discard</em> is selected, an <code class="highlighter-rouge">{event: 'draft', error/result: '...', message: ...}</code> with the incoming message and the result of <em>‘Edit’</em> or <em>‘Discard’</em> is returned. If there was an error when displaying the dialog, the <code class="highlighter-rouge">error</code> is returned instead of the <code class="highlighter-rouge">result</code> in the message. If <code class="highlighter-rouge">ignore</code> is true, an <code class="highlighter-rouge">ignore</code> option is used which returns <code class="highlighter-rouge">result: 'ignore'</code>.</li>
-  <li><code class="highlighter-rouge">{action: 'status', message: '...', modified: bool}</code> can be sent at any time to display a message in the status bar. The optional <code class="highlighter-rouge">modified</code> flag is used to update the modified state. Instead of a <code class="highlighter-rouge">message</code>, you can use <code class="highlighter-rouge">messageKey</code> to specify a resource key for the message.</li>
-  <li><code class="highlighter-rouge">{action: 'spinner', message: '...', show: bool, enabled: bool}</code> can be sent at any time to display a spinner with a <code class="highlighter-rouge">message</code> or hide the current spinner if <code class="highlighter-rouge">show</code> is set to <code class="highlighter-rouge">false</code>. Instead of a <code class="highlighter-rouge">message</code>, you can use <code class="highlighter-rouge">messageKey</code> to specify a resource key for the message.</li>
-  <li><code class="highlighter-rouge">{action: 'export', format: '...'}</code> can be sent at any time to return <code class="highlighter-rouge">{event: 'export', format: '...', message: ..., data: '...', xml: '...'}</code> with the incoming message, data and XML used for the given format. Supported formats include <code class="highlighter-rouge">html</code> (the former embed format), <code class="highlighter-rouge">html2</code> (the new embed format), <code class="highlighter-rouge">svg</code> (default), <code class="highlighter-rouge">xmlsvg</code> (SVG with embeddded XML), <code class="highlighter-rouge">png</code> and <code class="highlighter-rouge">xmlpng</code> (PNG with embedded XML). The <code class="highlighter-rouge">data</code> parameter in the <code class="highlighter-rouge">export</code> event contains a valid data URI for the given export format. Currently, a base64 encoding is used, but this may change in the future.
-    <ul>
-      <li>For <code class="highlighter-rouge">png</code> and <code class="highlighter-rouge">xmlpng</code>, use an additional <code class="highlighter-rouge">spin</code> (or <code class="highlighter-rouge">spinKey</code>) parameter to enable a spinner and specify a <code class="highlighter-rouge">message</code> (or <code class="highlighter-rouge">messageKey</code>) while the image is being generated. An optional scale parameter may be used to specify the zoom (default is 1). An optional layersId parameter can be used to define the array of visible layer IDs. An optional pageId parameter can be used to specify the page to be exported, or else currentPage (boolean) can be used to specify to export the current selected page. For browsers that support client-side image export (all modern browsers), the following additional parameters may be specified: width (px) defines the width of the image to be exported, border (px) defines the border, shadow (boolean) specifies if a shadow filter should be applied to the export, grid (boolean) specifies if a grid should be added, keepTheme (boolean) specifies if the theme should be kept (eg. for dark themes), transparent (boolean) specifies if a transparent background should be used and background (string) specifies the background color.</li>
-      <li>Use the optional <code class="highlighter-rouge">xml</code> parameter to specify the XML of the diagram to be exported for all supported formats.</li>
-      <li>Use the optional <code class="highlighter-rouge">embedImages: false</code> for the <code class="highlighter-rouge">svg</code> and <code class="highlighter-rouge">xmlsvg</code> formats to disable embedded images in the SVG output.</li>
-    </ul>
-  </li>
+  <li>Select <em>View &gt; Scratchpad</em> to display or hide the scratchpad.</li>
 </ul>
 
-<p>If any unknown <code class="highlighter-rouge">message</code> is received, the system responds with <code class="highlighter-rouge">{error: 'unknownMessage', data: ...}</code> where data is the string representation of the incoming message.</p>
+<p><img src="/assets/img/blog/view-scratchpad.png" style="width=100%;max-width:300px;height:auto;" alt="Select View &gt; Scratchpad to display or hide the scratchpad" /></p>
 
-<h3 id="examples">Examples</h3>
+<p><a href="/doc/getting-started-editor.html">See how to get started with the diagrams.net editor</a></p>
+
+<h2 id="add-shapes-to-the-scratchpad">Add shapes to the scratchpad</h2>
 
 <ul>
-  <li><a href="https://github.com/jgraph/drawio-html5">Introduction and example</a></li>
-  <li><a href="https://github.com/jgraph/drawio-github">GitHub Example</a></li>
-  <li><a href="/blog/embedding-walkthrough.html">Simple embedding walkthrough</a></li>
+  <li><a href="/doc/faq/select-multiple-shapes.html">Select one or more shapes</a>, then drag them from the drawing canvas and drop them onto the scratchpad.</li>
+  <li>Alternatively, once you have selected the shapes, click on the little <em>+</em> (plus) icon in the heading of the Scratchpad library to add the shapes.</li>
 </ul>
+
+<p><img src="/assets/img/blog/scratchpad-add.png" style="width=100%;max-width:300px;height:auto;" alt="Select one or more shapes, then click the plus symbol to add it to the scratchpad in diagrams.net" /></p>
+
+<h2 id="add-shapes-from-the-scratchpad-to-the-drawing-canvas">Add shapes from the scratchpad to the drawing canvas</h2>
+
+<p>Click on one of the shapes or groups of shapes you have saved to the scratchpad to add another copy to the drawing canvas.</p>
+
+<p><img src="/assets/img/blog/scratchpad-add-multiple-shapes.gif" style="width=100%;max-width:400px;height:auto;" alt="Add multiple shapes as one element on the scratchpad in diagrams.net" /></p>
+
+<p>Drag the shapes from the scratchpad. You can connect this to an existing shape on the drawing canvas by hovering over the target shape and then dropping it on one of the direction arrows that appear.</p>
+
+<p><img src="/assets/img/blog/scratchpad-add-connect.gif" style="width=100%;max-width:400px;height:auto;" alt="Drop a shape or group of shapes  from the scratchpad onto  an existing shape's direction arrow on the drawing canvas to add and connect it" /></p>
+
+<h2 id="edit-the-shapes-on-the-scratchpad">Edit the shapes on the scratchpad</h2>
+
+<p>Click the edit pencil icon to open the scratchpad ‘library’ and edit the shapes you have stored there.</p>
+
+<p><img src="/assets/img/blog/scratchpad-edit.png" style="width=100%;max-width:200px;height:auto;" alt="Click the edit pencil to edit the shapes you have stored on the scratchpad in diagrams.net" /></p>
+
+<ul>
+  <li>Click and drag shapes into new positions in the scratchpad.</li>
+  <li>Click on the small cross in the top-right of a shape to delete it from the scratchpad.</li>
+  <li>Click on the text field underneath a shape and enter a name. By default, shapes added to the scratchpad are untitled.</li>
+</ul>
+
+<p>Click <em>Save</em> when you have finished editing the scratchpad to return to the drawing canvas.</p>
+
+<p><img src="/assets/img/blog/scratchpad-edit.gif" style="width=100%;max-width:400px;height:auto;" alt="Edit the contents of the scratchpad in diagrams.net" /></p>
+
+<h2 id="export-the-scratchpad-as-a-custom-shape-library">Export the scratchpad as a custom shape library</h2>
+
+<ol>
+  <li>Click the edit pencil to edit the scratchpad, then click <em>Export</em>.
+<br /><img src="/assets/img/blog/scratchpad-export.png" style="width=100%;max-width:400px;height:auto;" alt="Export the scratchpad as a custom library in diagrams.net" /></li>
+  <li>Enter a filename - your custom shape library will be saved with the <code class="highlighter-rouge">.xml</code> file extension by default - then click <em>Download</em>, or click on the location where you want to save the file.
+<br /><img src="/assets/img/blog/scratchpad-save-as.png" style="width=100%;max-width:300px;height:auto;" alt="Export the scratchpad as a custom library in diagrams.net" /></li>
+</ol>
+
+<p><a href="/blog/custom-libraries.html">See how to open and use custom libraries in diagrams.net</a></p>
 
 
     </div>
